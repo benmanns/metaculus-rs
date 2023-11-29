@@ -1,0 +1,15 @@
+enableMinimalUpdate: true
+enablePostProcessFile: true
+generatorName: rust
+gitHost: github.com
+gitRepoId: metaculus
+gitUserId: benmanns
+httpUserAgent: "metaculus-rs/0.0.1"
+infoEmail: Benjamin Manns <opensource@benmanns.com>
+inputSpec: Metaculus API (1.0) Modified.yaml
+licenseInfo: Unknown
+packageName: metaculus
+packageVersion: 0.0.1
+repositoryUrl: https://github.com/benmanns/metaculus-rs
+strictSpec: true
+useSingleRequestParameter: true

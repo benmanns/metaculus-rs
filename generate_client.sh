@@ -10,3 +10,5 @@ sed -E \
   -e 's/^  "(\/[^"]+)":$/  \1:/g' \
   -e 's/\bpattern: "\^\.\+\$"$/pattern: ^.+$/g' \
   -i "Metaculus API (1.0) Modified.yaml"
+
+openapi-generator-cli generate --config openapi-generator-cli.yaml
