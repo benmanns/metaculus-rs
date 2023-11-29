@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 ## categories_list
 
-> crate::models::PaginatedCategoryList categories_list(id, long_name, short_name, limit, offset, url)
+> crate::models::PaginatedCategoryList categories_list(limit, offset)
 
 
 ### Parameters
@@ -19,12 +19,8 @@ Method | HTTP request | Description
 
 Name | Type | Description  | Required | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
-**id** | **String** |  | [required] |
-**long_name** | **String** |  | [required] |
-**short_name** | **String** |  | [required] |
 **limit** | Option<**i32**> | Number of results to return per page. |  |
 **offset** | Option<**i32**> | The initial index from which to return the results. |  |
-**url** | Option<**String**> |  |  |
 
 ### Return type
 

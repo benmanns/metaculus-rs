@@ -16,14 +16,10 @@ use crate::apis::ResponseContent;
 /// struct for passing parameters to the method [`categories_list`]
 #[derive(Clone, Debug)]
 pub struct CategoriesListParams {
-    pub id: String,
-    pub long_name: String,
-    pub short_name: String,
     /// Number of results to return per page.
     pub limit: Option<i32>,
     /// The initial index from which to return the results.
     pub offset: Option<i32>,
-    pub url: Option<String>,
 }
 
 /// struct for passing parameters to the method [`categories_retrieve`]
@@ -57,12 +53,8 @@ pub async fn categories_list(
     let local_var_configuration = configuration;
 
     // unbox the parameters
-    let id = params.id;
-    let long_name = params.long_name;
-    let short_name = params.short_name;
     let limit = params.limit;
     let offset = params.offset;
-    let url = params.url;
 
     let local_var_client = &local_var_configuration.client;
 
@@ -70,19 +62,13 @@ pub async fn categories_list(
     let mut local_var_req_builder =
         local_var_client.request(reqwest::Method::GET, local_var_uri_str.as_str());
 
-    local_var_req_builder = local_var_req_builder.query(&[("id", &id.to_string())]);
     if let Some(ref local_var_str) = limit {
         local_var_req_builder =
             local_var_req_builder.query(&[("limit", &local_var_str.to_string())]);
     }
-    local_var_req_builder = local_var_req_builder.query(&[("long_name", &long_name.to_string())]);
     if let Some(ref local_var_str) = offset {
         local_var_req_builder =
             local_var_req_builder.query(&[("offset", &local_var_str.to_string())]);
-    }
-    local_var_req_builder = local_var_req_builder.query(&[("short_name", &short_name.to_string())]);
-    if let Some(ref local_var_str) = url {
-        local_var_req_builder = local_var_req_builder.query(&[("url", &local_var_str.to_string())]);
     }
     if let Some(ref local_var_user_agent) = local_var_configuration.user_agent {
         local_var_req_builder =

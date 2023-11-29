@@ -168,42 +168,16 @@ paths:
     get:
       operationId: categories_list
       parameters:
-      - in: query
-        name: id
-        schema:
-          type: string
-          maxLength: 100
-          minLength: 1
-        required: true
       - name: limit
         in: query
         description: Number of results to return per page.
         schema:
           type: integer
-      - in: query
-        name: long_name
-        schema:
-          type: string
-          maxLength: 150
-          minLength: 1
-        required: true
       - name: offset
         in: query
         description: The initial index from which to return the results.
         schema:
           type: integer
-      - in: query
-        name: short_name
-        schema:
-          type: string
-          maxLength: 100
-          minLength: 1
-        required: true
-      - in: query
-        name: url
-        schema:
-          type: string
-          format: uri
       tags:
       - categories
       security:

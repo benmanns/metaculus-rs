@@ -1,6 +1,31 @@
 #!/usr/bin/env ruby
 
+require 'set'
 require 'yaml'
+
+# clear_parameters clears the parameters from the spec that are in the
+# parameters set. It expects to clear the parameters, and if not found,
+# it will raise an error, to ensure that we're updating the parameter
+# modifications as the original spec changes.
+# To clear by name, use the name as a string.
+# To clear by name and in, use an array of [name, in].
+def clear_parameters(spec, path, method, parameters)
+  found = Set.new
+  parameters = Set.new(parameters)
+  spec['paths'][path][method]['parameters'].each do |parameter|
+    if parameters.include?(parameter['name'])
+      found.add(parameter['name'])
+      parameters.delete(parameter['name'])
+    elsif parameters.include?([parameter['name'], parameter['in']])
+      found.add([parameter['name'], parameter['in']])
+      parameters.delete([parameter['name'], parameter['in']])
+    end
+  end
+  raise "Parameter#{parameters.length > 1 ? 's' : ''} not found: #{parameters.to_a.sort.map(&:inspect).join(', ')}" unless parameters.empty?
+  spec['paths'][path][method]['parameters'].reject! do |parameter|
+    found.include?(parameter['name']) || found.include?([parameter['name'], parameter['in']])
+  end
+end
 
 def process(spec)
   spec['paths'].each do |path, methods|
@@ -18,6 +43,9 @@ def process(spec)
       end
     end
   end
+
+  # Seemingly unused parameters
+  clear_parameters(spec, '/api2/categories/', 'get', %w[id long_name short_name url])
 
   # Add servers config to aid generated code and docs
   spec['servers'] = [{ 'url' => 'https://www.metaculus.com' }]
