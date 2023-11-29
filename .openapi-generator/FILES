@@ -115,7 +115,6 @@ src/models/extended_prediction_username.rs
 src/models/mod.rs
 src/models/notification.rs
 src/models/notification_type_enum.rs
-src/models/option.rs
 src/models/organization.rs
 src/models/organization_detail.rs
 src/models/paginated_category_list.rs

@@ -26,3 +26,6 @@
 .travis.yml
 Cargo.toml
 git_push.sh
+
+# Generated Option needs to use core::option::Option to avoid conflict
+src/models/option.rs

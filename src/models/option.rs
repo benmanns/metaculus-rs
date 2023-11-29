@@ -10,8 +10,8 @@
 
 #[derive(Clone, Debug, PartialEq, Serialize, Deserialize)]
 pub struct Option {
-    #[serde(rename = "id", skip_serializing_if = "Option::is_none")]
-    pub id: Option<i32>,
+    #[serde(rename = "id", skip_serializing_if = "core::option::Option::is_none")]
+    pub id: core::option::Option<i32>,
     #[serde(rename = "label")]
     pub label: String,
 }
