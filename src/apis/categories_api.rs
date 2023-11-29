@@ -26,10 +26,6 @@ pub struct CategoriesListParams {
 #[derive(Clone, Debug)]
 pub struct CategoriesRetrieveParams {
     pub bare_id: i32,
-    pub id: String,
-    pub long_name: String,
-    pub short_name: String,
-    pub url: Option<String>,
 }
 
 /// struct for typed errors of method [`categories_list`]
@@ -117,10 +113,6 @@ pub async fn categories_retrieve(
 
     // unbox the parameters
     let bare_id = params.bare_id;
-    let id = params.id;
-    let long_name = params.long_name;
-    let short_name = params.short_name;
-    let url = params.url;
 
     let local_var_client = &local_var_configuration.client;
 
@@ -132,12 +124,6 @@ pub async fn categories_retrieve(
     let mut local_var_req_builder =
         local_var_client.request(reqwest::Method::GET, local_var_uri_str.as_str());
 
-    local_var_req_builder = local_var_req_builder.query(&[("id", &id.to_string())]);
-    local_var_req_builder = local_var_req_builder.query(&[("long_name", &long_name.to_string())]);
-    local_var_req_builder = local_var_req_builder.query(&[("short_name", &short_name.to_string())]);
-    if let Some(ref local_var_str) = url {
-        local_var_req_builder = local_var_req_builder.query(&[("url", &local_var_str.to_string())]);
-    }
     if let Some(ref local_var_user_agent) = local_var_configuration.user_agent {
         local_var_req_builder =
             local_var_req_builder.header(reqwest::header::USER_AGENT, local_var_user_agent.clone());

@@ -40,7 +40,7 @@ Name | Type | Description  | Required | Notes
 
 ## categories_retrieve
 
-> crate::models::Category categories_retrieve(bare_id, id, long_name, short_name, url)
+> crate::models::Category categories_retrieve(bare_id)
 
 
 ### Parameters
@@ -49,10 +49,6 @@ Name | Type | Description  | Required | Notes
 Name | Type | Description  | Required | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
 **bare_id** | **i32** |  | [required] |
-**id** | **String** |  | [required] |
-**long_name** | **String** |  | [required] |
-**short_name** | **String** |  | [required] |
-**url** | Option<**String**> |  |  |
 
 ### Return type
 

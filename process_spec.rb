@@ -46,6 +46,7 @@ def process(spec)
 
   # Seemingly unused parameters
   clear_parameters(spec, '/api2/categories/', 'get', %w[id long_name short_name url])
+  clear_parameters(spec, '/api2/categories/{bare_id}/', 'get', %w[id long_name short_name url])
 
   # Add servers config to aid generated code and docs
   spec['servers'] = [{ 'url' => 'https://www.metaculus.com' }]
