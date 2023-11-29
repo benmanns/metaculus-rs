@@ -72,7 +72,7 @@ Name | Type | Description  | Required | Notes
 
 ## users_global_cp_reminder_create
 
-> crate::models::User users_global_cp_reminder_create(first_name, id2, last_name, ask_when_reaffirm_question_modal, date_joined, default_community_visibility, default_mp_visibility, email, formerly_known_as, id, is_staff, is_superuser, last_visited, level, level_title, permissions, powers, purchasable_track_record, score, show_profile_comments, supporter_level, supporter_since, tachyons, url, username, username_change_cost, user)
+> crate::models::User users_global_cp_reminder_create(first_name, last_name, ask_when_reaffirm_question_modal, date_joined, default_community_visibility, default_mp_visibility, email, formerly_known_as, id, is_staff, is_superuser, last_visited, level, level_title, permissions, powers, purchasable_track_record, score, show_profile_comments, supporter_level, supporter_since, tachyons, url, username, username_change_cost, user)
 
 
 ### Parameters
@@ -81,7 +81,6 @@ Name | Type | Description  | Required | Notes
 Name | Type | Description  | Required | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
 **first_name** | **String** |  | [required] |
-**id2** | **i32** |  | [required] |
 **last_name** | **String** |  | [required] |
 **ask_when_reaffirm_question_modal** | Option<**bool**> |  |  |
 **date_joined** | Option<**String**> |  |  |
@@ -126,7 +125,7 @@ Name | Type | Description  | Required | Notes
 
 ## users_global_cp_reminder_retrieve
 
-> crate::models::User users_global_cp_reminder_retrieve(first_name, id2, last_name, ask_when_reaffirm_question_modal, date_joined, default_community_visibility, default_mp_visibility, email, formerly_known_as, id, is_staff, is_superuser, last_visited, level, level_title, permissions, powers, purchasable_track_record, score, show_profile_comments, supporter_level, supporter_since, tachyons, url, username, username_change_cost)
+> crate::models::User users_global_cp_reminder_retrieve(first_name, last_name, ask_when_reaffirm_question_modal, date_joined, default_community_visibility, default_mp_visibility, email, formerly_known_as, id, is_staff, is_superuser, last_visited, level, level_title, permissions, powers, purchasable_track_record, score, show_profile_comments, supporter_level, supporter_since, tachyons, url, username, username_change_cost)
 
 
 ### Parameters
@@ -135,7 +134,6 @@ Name | Type | Description  | Required | Notes
 Name | Type | Description  | Required | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
 **first_name** | **String** |  | [required] |
-**id2** | **i32** |  | [required] |
 **last_name** | **String** |  | [required] |
 **ask_when_reaffirm_question_modal** | Option<**bool**> |  |  |
 **date_joined** | Option<**String**> |  |  |
@@ -179,7 +177,7 @@ Name | Type | Description  | Required | Notes
 
 ## users_list
 
-> crate::models::PaginatedUserList users_list(first_name, id2, last_name, ask_when_reaffirm_question_modal, date_joined, default_community_visibility, default_mp_visibility, email, formerly_known_as, id, is_staff, is_superuser, last_visited, level, level_title, page, permissions, powers, purchasable_track_record, score, show_profile_comments, supporter_level, supporter_since, tachyons, url, username, username_change_cost)
+> crate::models::PaginatedUserList users_list(first_name, last_name, ask_when_reaffirm_question_modal, date_joined, default_community_visibility, default_mp_visibility, email, formerly_known_as, id, is_staff, is_superuser, last_visited, level, level_title, page, permissions, powers, purchasable_track_record, score, show_profile_comments, supporter_level, supporter_since, tachyons, url, username, username_change_cost)
 
 
 ### Parameters
@@ -188,7 +186,6 @@ Name | Type | Description  | Required | Notes
 Name | Type | Description  | Required | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
 **first_name** | **String** |  | [required] |
-**id2** | **i32** |  | [required] |
 **last_name** | **String** |  | [required] |
 **ask_when_reaffirm_question_modal** | Option<**bool**> |  |  |
 **date_joined** | Option<**String**> |  |  |

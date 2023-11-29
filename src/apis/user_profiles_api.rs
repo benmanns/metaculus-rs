@@ -17,7 +17,6 @@ use crate::apis::ResponseContent;
 #[derive(Clone, Debug)]
 pub struct UserProfilesListParams {
     pub first_name: String,
-    pub id2: i32,
     pub last_name: String,
     pub ask_when_reaffirm_question_modal: Option<bool>,
     pub date_joined: Option<String>,
@@ -177,7 +176,6 @@ pub async fn user_profiles_list(
 
     // unbox the parameters
     let first_name = params.first_name;
-    let id2 = params.id2;
     let last_name = params.last_name;
     let ask_when_reaffirm_question_modal = params.ask_when_reaffirm_question_modal;
     let date_joined = params.date_joined;
@@ -206,11 +204,7 @@ pub async fn user_profiles_list(
 
     let local_var_client = &local_var_configuration.client;
 
-    let local_var_uri_str = format!(
-        "{}/api2/user-profiles/",
-        local_var_configuration.base_path,
-        id = id2
-    );
+    let local_var_uri_str = format!("{}/api2/user-profiles/", local_var_configuration.base_path);
     let mut local_var_req_builder =
         local_var_client.request(reqwest::Method::GET, local_var_uri_str.as_str());
 

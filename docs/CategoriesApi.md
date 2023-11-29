@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 ## categories_list
 
-> crate::models::PaginatedCategoryList categories_list(bare_id, id, long_name, short_name, limit, offset, url)
+> crate::models::PaginatedCategoryList categories_list(id, long_name, short_name, limit, offset, url)
 
 
 ### Parameters
@@ -19,7 +19,6 @@ Method | HTTP request | Description
 
 Name | Type | Description  | Required | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
-**bare_id** | **i32** |  | [required] |
 **id** | **String** |  | [required] |
 **long_name** | **String** |  | [required] |
 **short_name** | **String** |  | [required] |

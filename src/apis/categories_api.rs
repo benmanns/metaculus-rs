@@ -16,7 +16,6 @@ use crate::apis::ResponseContent;
 /// struct for passing parameters to the method [`categories_list`]
 #[derive(Clone, Debug)]
 pub struct CategoriesListParams {
-    pub bare_id: i32,
     pub id: String,
     pub long_name: String,
     pub short_name: String,
@@ -58,7 +57,6 @@ pub async fn categories_list(
     let local_var_configuration = configuration;
 
     // unbox the parameters
-    let bare_id = params.bare_id;
     let id = params.id;
     let long_name = params.long_name;
     let short_name = params.short_name;
@@ -68,11 +66,7 @@ pub async fn categories_list(
 
     let local_var_client = &local_var_configuration.client;
 
-    let local_var_uri_str = format!(
-        "{}/api2/categories/",
-        local_var_configuration.base_path,
-        bare_id = bare_id
-    );
+    let local_var_uri_str = format!("{}/api2/categories/", local_var_configuration.base_path);
     let mut local_var_req_builder =
         local_var_client.request(reqwest::Method::GET, local_var_uri_str.as_str());
 

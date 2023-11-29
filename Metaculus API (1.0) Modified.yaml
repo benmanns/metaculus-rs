@@ -168,11 +168,6 @@ paths:
     get:
       operationId: categories_list
       parameters:
-      - in: path
-        name: bare_id
-        schema:
-          type: integer
-        required: true
       - in: query
         name: id
         schema:
@@ -2536,11 +2531,6 @@ paths:
         name: id
         schema:
           type: integer
-      - in: path
-        name: id
-        schema:
-          type: integer
-        required: true
       - in: query
         name: is_staff
         schema:
@@ -3143,11 +3133,6 @@ paths:
         name: id
         schema:
           type: integer
-      - in: path
-        name: id
-        schema:
-          type: integer
-        required: true
       - in: query
         name: is_staff
         schema:
@@ -4218,11 +4203,6 @@ paths:
         name: id
         schema:
           type: integer
-      - in: path
-        name: id
-        schema:
-          type: integer
-        required: true
       - in: query
         name: is_staff
         schema:
@@ -4362,11 +4342,6 @@ paths:
         name: id
         schema:
           type: integer
-      - in: path
-        name: id
-        schema:
-          type: integer
-        required: true
       - in: query
         name: is_staff
         schema:

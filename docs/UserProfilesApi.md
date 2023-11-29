@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 ## user_profiles_list
 
-> crate::models::PaginatedUserProfileList user_profiles_list(first_name, id2, last_name, ask_when_reaffirm_question_modal, date_joined, default_community_visibility, default_mp_visibility, email, formerly_known_as, id, is_staff, is_superuser, last_visited, level, level_title, page, permissions, powers, purchasable_track_record, score, show_profile_comments, supporter_level, supporter_since, tachyons, url, username, username_change_cost)
+> crate::models::PaginatedUserProfileList user_profiles_list(first_name, last_name, ask_when_reaffirm_question_modal, date_joined, default_community_visibility, default_mp_visibility, email, formerly_known_as, id, is_staff, is_superuser, last_visited, level, level_title, page, permissions, powers, purchasable_track_record, score, show_profile_comments, supporter_level, supporter_since, tachyons, url, username, username_change_cost)
 
 
 ### Parameters
@@ -22,7 +22,6 @@ Method | HTTP request | Description
 Name | Type | Description  | Required | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
 **first_name** | **String** |  | [required] |
-**id2** | **i32** |  | [required] |
 **last_name** | **String** |  | [required] |
 **ask_when_reaffirm_question_modal** | Option<**bool**> |  |  |
 **date_joined** | Option<**String**> |  |  |

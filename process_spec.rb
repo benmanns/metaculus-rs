@@ -12,6 +12,9 @@ def process(spec)
             parameter.delete('required')
           end
         end
+
+        # in: path but not in path, so we should remove it
+        details['parameters'].reject! { |p| p['in'] == 'path' && !path.include?("{#{p['name']}}") }
       end
     end
   end
