@@ -12,3 +12,5 @@ sed -E \
   -i "Metaculus API (1.0) Modified.yaml"
 
 openapi-generator-cli generate --config openapi-generator-cli.yaml
+# enablePostProcessFile is broken, so post-process here:
+cargo fmt --all

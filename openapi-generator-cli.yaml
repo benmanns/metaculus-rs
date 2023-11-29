@@ -1,4 +1,5 @@
 enableMinimalUpdate: true
+# Does not work, but leaving in case it starts working.
 enablePostProcessFile: true
 generatorName: rust
 gitHost: github.com
