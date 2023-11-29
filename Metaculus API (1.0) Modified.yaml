@@ -181,7 +181,6 @@ paths:
           minLength: 1
         required: true
       - name: limit
-        required: false
         in: query
         description: Number of results to return per page.
         schema:
@@ -194,7 +193,6 @@ paths:
           minLength: 1
         required: true
       - name: offset
-        required: false
         in: query
         description: The initial index from which to return the results.
         schema:
@@ -293,7 +291,6 @@ paths:
           type: string
           format: date-time
       - name: cursor
-        required: false
         in: query
         description: The pagination cursor value.
         schema:
@@ -303,13 +300,11 @@ paths:
         schema:
           type: integer
       - name: limit
-        required: false
         in: query
         description: Number of results to return per page.
         schema:
           type: integer
       - name: order_by
-        required: false
         in: query
         description: Which field to use when ordering the results.
         schema:
@@ -543,7 +538,6 @@ paths:
       operationId: notifications_list
       parameters:
       - name: page
-        required: false
         in: query
         description: A page number within the paginated result set.
         schema:
@@ -594,7 +588,6 @@ paths:
       operationId: organizations_list
       parameters:
       - name: page
-        required: false
         in: query
         description: A page number within the paginated result set.
         schema:
@@ -831,19 +824,16 @@ paths:
           type: string
           format: date-time
       - name: limit
-        required: false
         in: query
         description: Number of results to return per page.
         schema:
           type: integer
       - name: offset
-        required: false
         in: query
         description: The initial index from which to return the results.
         schema:
           type: integer
       - name: order_by
-        required: false
         in: query
         description: Which field to use when ordering the results.
         schema:
@@ -926,13 +916,11 @@ paths:
       operationId: projects_list
       parameters:
       - name: limit
-        required: false
         in: query
         description: Number of results to return per page.
         schema:
           type: integer
       - name: offset
-        required: false
         in: query
         description: The initial index from which to return the results.
         schema:
@@ -1497,19 +1485,16 @@ paths:
       operationId: projectstats_list
       parameters:
       - name: limit
-        required: false
         in: query
         description: Number of results to return per page.
         schema:
           type: integer
       - name: offset
-        required: false
         in: query
         description: The initial index from which to return the results.
         schema:
           type: integer
       - name: order_by
-        required: false
         in: query
         description: Which field to use when ordering the results.
         schema:
@@ -1665,7 +1650,6 @@ paths:
         description: Set to 'true' to include the description (and categories) in
           responses
       - name: limit
-        required: false
         in: query
         description: Number of results to return per page.
         schema:
@@ -1675,13 +1659,11 @@ paths:
         schema:
           type: number
       - name: offset
-        required: false
         in: query
         description: The initial index from which to return the results.
         schema:
           type: integer
       - name: order_by
-        required: false
         in: query
         description: Which field to use when ordering the results.
         schema:
@@ -2307,13 +2289,11 @@ paths:
       operationId: rankings_list
       parameters:
       - name: limit
-        required: false
         in: query
         description: Number of results to return per page.
         schema:
           type: integer
       - name: offset
-        required: false
         in: query
         description: The initial index from which to return the results.
         schema:
@@ -2361,7 +2341,6 @@ paths:
       operationId: reminders_list
       parameters:
       - name: page
-        required: false
         in: query
         description: A page number within the paginated result set.
         schema:
@@ -2591,7 +2570,6 @@ paths:
           type: string
           minLength: 1
       - name: page
-        required: false
         in: query
         description: A page number within the paginated result set.
         schema:
@@ -3199,7 +3177,6 @@ paths:
           type: string
           minLength: 1
       - name: page
-        required: false
         in: query
         description: A page number within the paginated result set.
         schema:
