@@ -168,7 +168,7 @@ metaculus = { path = "./metaculus" }
 
 ## Documentation for API Endpoints
 
-All URIs are relative to *http://localhost*
+All URIs are relative to *https://www.metaculus.com*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------

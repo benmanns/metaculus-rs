@@ -19,6 +19,9 @@ def process(spec)
     end
   end
 
+  # Add servers config to aid generated code and docs
+  spec['servers'] = [{ 'url' => 'https://www.metaculus.com' }]
+
   spec
 end
 

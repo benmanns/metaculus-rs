@@ -1,6 +1,6 @@
 # \QuestionsApi
 
-All URIs are relative to *http://localhost*
+All URIs are relative to *https://www.metaculus.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
