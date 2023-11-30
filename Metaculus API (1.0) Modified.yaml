@@ -1974,7 +1974,13 @@ paths:
       - tokenAuth: []
       responses:
         '200':
-          description: No response body
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/ExtendedPredictionUsername'
+          description: ''
   /api2/questions/{id}/question-sharing/{username}/:
     post:
       operationId: questions_question_sharing_create

@@ -154,6 +154,24 @@ def process(spec)
       }
     end
 
+    # /api2/questions/{id}/predictions/
+    if spec['paths']['/api2/questions/{id}/predictions/']['get']['responses']['200'] == { 'description' => 'No response body' }
+      # Add [ExtendedPredictionUsername] response schema based on observed response
+      spec['paths']['/api2/questions/{id}/predictions/']['get']['responses']['200'] = {
+        'content' => {
+          'application/json' => {
+            'schema' => {
+              'type' => 'array',
+              'items' => {
+                '$ref' => '#/components/schemas/ExtendedPredictionUsername'
+              }
+            }
+          }
+        },
+        'description' => ''
+      }
+    end
+
     if schemas_were_sorted
       spec['components']['schemas'] = spec['components']['schemas'].sort.to_h
     end
