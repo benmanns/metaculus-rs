@@ -163,7 +163,11 @@ paths:
       - {}
       responses:
         '200':
-          description: No response body
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AboutNumbers'
+          description: ''
   /api2/categories/:
     get:
       operationId: categories_list
@@ -2822,6 +2826,22 @@ paths:
           description: ''
 components:
   schemas:
+    AboutNumbers:
+      type: object
+      properties:
+        predictions:
+          type: integer
+        questions:
+          type: integer
+        resolved_questions:
+          type: integer
+        years_of_predictions:
+          type: integer
+      required:
+      - predictions
+      - questions
+      - resolved_questions
+      - years_of_predictions
     Boost:
       type: object
       properties:

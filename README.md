@@ -261,6 +261,7 @@ Class | Method | HTTP request | Description
 
 ## Documentation For Models
 
+ - [AboutNumbers](docs/AboutNumbers.md)
  - [Boost](docs/Boost.md)
  - [BulkPredictionInput](docs/BulkPredictionInput.md)
  - [Category](docs/Category.md)

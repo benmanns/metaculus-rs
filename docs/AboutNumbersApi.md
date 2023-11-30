@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 ## about_numbers_retrieve
 
-> about_numbers_retrieve()
+> crate::models::AboutNumbers about_numbers_retrieve()
 
 
 ### Parameters
@@ -19,7 +19,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
- (empty response body)
+[**crate::models::AboutNumbers**](AboutNumbers.md)
 
 ### Authorization
 
@@ -28,7 +28,7 @@ This endpoint does not need any parameter.
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

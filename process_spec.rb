@@ -65,6 +65,35 @@ def process(spec)
   clear_parameters(spec, '/api2/users/global-cp-reminder/', 'get', %w[ask_when_reaffirm_question_modal date_joined default_community_visibility default_mp_visibility email first_name formerly_known_as id is_staff is_superuser last_name last_visited level levelTitle permissions powers purchasable_track_record score show_profile_comments supporter_level supporter_since tachyons url username username_change_cost])
   clear_parameters(spec, '/api2/users/global-cp-reminder/', 'post', %w[ask_when_reaffirm_question_modal date_joined default_community_visibility default_mp_visibility email first_name formerly_known_as id is_staff is_superuser last_name last_visited level levelTitle permissions powers purchasable_track_record score show_profile_comments supporter_level supporter_since tachyons url username username_change_cost])
 
+  schemas_were_sorted = spec['components']['schemas'].keys == spec['components']['schemas'].keys.sort
+
+  if spec['paths']['/api2/about-numbers/']['get']['responses']['200'] == { 'description' => 'No response body' }
+    # Add AboutNumbers response schema based on observed response
+    spec['paths']['/api2/about-numbers/']['get']['responses']['200'] = {
+      'content' => {
+        'application/json' => {
+          'schema' => {
+            '$ref' => '#/components/schemas/AboutNumbers'
+          }
+        }
+      },
+      'description' => ''
+    }
+    spec['components']['schemas']['AboutNumbers'] = {
+      'type' => 'object',
+      'properties' => {
+        'predictions' => { 'type' => 'integer' },
+        'questions' => { 'type' => 'integer' },
+        'resolved_questions' => { 'type' => 'integer' },
+        'years_of_predictions' => { 'type' => 'integer' }
+      },
+      'required' => ['predictions', 'questions', 'resolved_questions', 'years_of_predictions']
+    }
+    if schemas_were_sorted
+      spec['components']['schemas'] = spec['components']['schemas'].sort.to_h
+    end
+  end
+
   # Remove empty parameters (that we caused earlier)
   spec['paths'].each do |path, methods|
     methods.each do |method, details|
