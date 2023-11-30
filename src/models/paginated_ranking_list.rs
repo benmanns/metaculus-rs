@@ -30,7 +30,14 @@ pub struct PaginatedRankingList {
     pub results: Option<Vec<crate::models::Ranking>>,
 }
 
+impl Default for PaginatedRankingList {
+    fn default() -> Self {
+        Self::new()
+    }
+}
+
 impl PaginatedRankingList {
+    #[must_use]
     pub fn new() -> PaginatedRankingList {
         PaginatedRankingList {
             count: None,

@@ -37,6 +37,7 @@ pub struct ProjectUserStats {
 }
 
 impl ProjectUserStats {
+    #[must_use]
     pub fn new(
         id: i32,
         username: String,

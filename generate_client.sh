@@ -14,3 +14,6 @@ sed -E \
 openapi-generator-cli generate --config openapi-generator-cli.yaml
 # enablePostProcessFile is broken, so post-process here:
 cargo fmt --all
+cargo clippy --all-features --fix --allow-dirty --allow-staged -- -W clippy::pedantic
+# Reformat after fix, as clippy may have changed formatting
+cargo fmt --all

@@ -45,6 +45,7 @@ pub struct SubQuestionList {
 }
 
 impl SubQuestionList {
+    #[must_use]
     pub fn new(
         active_state: Option<serde_json::Value>,
         id: i32,

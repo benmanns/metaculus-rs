@@ -22,7 +22,14 @@ pub struct PatchedUserProfile {
     pub website: Option<String>,
 }
 
+impl Default for PatchedUserProfile {
+    fn default() -> Self {
+        Self::new()
+    }
+}
+
 impl PatchedUserProfile {
+    #[must_use]
     pub fn new() -> PatchedUserProfile {
         PatchedUserProfile {
             id: None,

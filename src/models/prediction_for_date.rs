@@ -17,6 +17,7 @@ pub struct PredictionForDate {
 }
 
 impl PredictionForDate {
+    #[must_use]
     pub fn new(cp: String, mp: String) -> PredictionForDate {
         PredictionForDate { cp, mp }
     }

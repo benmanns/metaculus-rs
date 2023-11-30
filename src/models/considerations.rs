@@ -88,6 +88,7 @@ pub struct Considerations {
 
 impl Considerations {
     /// Just contains basic data used by all other serializers. Does not include all of the derived data.
+    #[must_use]
     pub fn new(
         active_state: Option<serde_json::Value>,
         url: String,

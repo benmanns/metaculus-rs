@@ -54,6 +54,7 @@ pub struct Prediction {
 }
 
 impl Prediction {
+    #[must_use]
     pub fn new(id: i32, user: Option<i32>, question: i32) -> Prediction {
         Prediction {
             id,

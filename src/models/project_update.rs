@@ -65,6 +65,7 @@ pub struct ProjectUpdate {
 }
 
 impl ProjectUpdate {
+    #[must_use]
     pub fn new(
         id: i32,
         name: String,

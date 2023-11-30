@@ -31,6 +31,7 @@ pub struct User {
 }
 
 impl User {
+    #[must_use]
     pub fn new(
         id: i32,
         url: String,

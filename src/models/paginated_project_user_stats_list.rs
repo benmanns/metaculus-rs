@@ -30,7 +30,14 @@ pub struct PaginatedProjectUserStatsList {
     pub results: Option<Vec<crate::models::ProjectUserStats>>,
 }
 
+impl Default for PaginatedProjectUserStatsList {
+    fn default() -> Self {
+        Self::new()
+    }
+}
+
 impl PaginatedProjectUserStatsList {
+    #[must_use]
     pub fn new() -> PaginatedProjectUserStatsList {
         PaginatedProjectUserStatsList {
             count: None,

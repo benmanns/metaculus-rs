@@ -17,6 +17,7 @@ pub struct BulkPredictionInput {
 }
 
 impl BulkPredictionInput {
+    #[must_use]
     pub fn new(
         prediction: Option<::std::collections::HashMap<String, serde_json::Value>>,
         question_id: i32,

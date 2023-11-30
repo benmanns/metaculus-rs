@@ -29,6 +29,7 @@ pub struct OrganizationDetail {
 }
 
 impl OrganizationDetail {
+    #[must_use]
     pub fn new(
         id: i32,
         name: String,

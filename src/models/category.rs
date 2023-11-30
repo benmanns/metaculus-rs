@@ -21,6 +21,7 @@ pub struct Category {
 }
 
 impl Category {
+    #[must_use]
     pub fn new(url: String, id: String, short_name: String, long_name: String) -> Category {
         Category {
             url,

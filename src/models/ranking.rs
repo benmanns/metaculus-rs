@@ -25,6 +25,7 @@ pub struct Ranking {
 }
 
 impl Ranking {
+    #[must_use]
     pub fn new(
         id: i32,
         url: String,

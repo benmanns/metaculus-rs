@@ -17,6 +17,7 @@ pub struct Option {
 }
 
 impl Option {
+    #[must_use]
     pub fn new(label: String) -> Option {
         Option { id: None, label }
     }

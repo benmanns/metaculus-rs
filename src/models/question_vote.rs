@@ -15,6 +15,7 @@ pub struct QuestionVote {
 }
 
 impl QuestionVote {
+    #[must_use]
     pub fn new(value: crate::models::ValueEnum) -> QuestionVote {
         QuestionVote { value }
     }

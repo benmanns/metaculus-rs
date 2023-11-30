@@ -15,6 +15,7 @@ pub struct ShowCommunity {
 }
 
 impl ShowCommunity {
+    #[must_use]
     pub fn new(msg: String) -> ShowCommunity {
         ShowCommunity { msg }
     }

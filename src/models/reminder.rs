@@ -78,6 +78,7 @@ pub struct Reminder {
 }
 
 impl Reminder {
+    #[must_use]
     pub fn new(
         id: i32,
         question: i32,

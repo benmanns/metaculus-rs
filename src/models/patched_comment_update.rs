@@ -110,7 +110,14 @@ pub struct PatchedCommentUpdate {
     pub edits: Option<::std::collections::HashMap<String, serde_json::Value>>,
 }
 
+impl Default for PatchedCommentUpdate {
+    fn default() -> Self {
+        Self::new()
+    }
+}
+
 impl PatchedCommentUpdate {
+    #[must_use]
     pub fn new() -> PatchedCommentUpdate {
         PatchedCommentUpdate {
             url: None,

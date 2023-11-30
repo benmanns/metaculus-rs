@@ -28,7 +28,14 @@ pub struct PaginatedCommentList {
     pub results: Option<Vec<crate::models::Comment>>,
 }
 
+impl Default for PaginatedCommentList {
+    fn default() -> Self {
+        Self::new()
+    }
+}
+
 impl PaginatedCommentList {
+    #[must_use]
     pub fn new() -> PaginatedCommentList {
         PaginatedCommentList {
             next: None,

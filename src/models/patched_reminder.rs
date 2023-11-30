@@ -82,7 +82,14 @@ pub struct PatchedReminder {
     pub repeat_pattern: Option<crate::models::RepeatPatternEnum>,
 }
 
+impl Default for PatchedReminder {
+    fn default() -> Self {
+        Self::new()
+    }
+}
+
 impl PatchedReminder {
+    #[must_use]
     pub fn new() -> PatchedReminder {
         PatchedReminder {
             id: None,

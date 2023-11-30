@@ -30,6 +30,7 @@ pub struct PredictionUsername {
 }
 
 impl PredictionUsername {
+    #[must_use]
     pub fn new(id: i32, user: Option<i32>, question: i32, username: String) -> PredictionUsername {
         PredictionUsername {
             id,

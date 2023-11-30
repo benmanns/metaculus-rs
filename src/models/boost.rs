@@ -15,6 +15,7 @@ pub struct Boost {
 }
 
 impl Boost {
+    #[must_use]
     pub fn new(message: String) -> Boost {
         Boost { message }
     }

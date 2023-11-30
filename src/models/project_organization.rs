@@ -17,6 +17,7 @@ pub struct ProjectOrganization {
 }
 
 impl ProjectOrganization {
+    #[must_use]
     pub fn new(id: i32, selected: bool) -> ProjectOrganization {
         ProjectOrganization { id, selected }
     }

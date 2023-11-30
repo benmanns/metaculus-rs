@@ -30,7 +30,14 @@ pub struct PaginatedCategoryList {
     pub results: Option<Vec<crate::models::Category>>,
 }
 
+impl Default for PaginatedCategoryList {
+    fn default() -> Self {
+        Self::new()
+    }
+}
+
 impl PaginatedCategoryList {
+    #[must_use]
     pub fn new() -> PaginatedCategoryList {
         PaginatedCategoryList {
             count: None,

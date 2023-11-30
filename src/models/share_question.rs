@@ -19,6 +19,7 @@ pub struct ShareQuestion {
 }
 
 impl ShareQuestion {
+    #[must_use]
     pub fn new(message: String, id: i32, username: String) -> ShareQuestion {
         ShareQuestion {
             message,

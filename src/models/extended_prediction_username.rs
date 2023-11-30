@@ -56,6 +56,7 @@ pub struct ExtendedPredictionUsername {
 }
 
 impl ExtendedPredictionUsername {
+    #[must_use]
     pub fn new(
         id: i32,
         user: Option<i32>,

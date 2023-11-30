@@ -80,6 +80,7 @@ pub struct CommentChildren {
 }
 
 impl CommentChildren {
+    #[must_use]
     pub fn new(
         url: String,
         id: i32,

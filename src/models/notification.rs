@@ -23,6 +23,7 @@ pub struct Notification {
 }
 
 impl Notification {
+    #[must_use]
     pub fn new(user: i32, r#type: crate::models::NotificationTypeEnum) -> Notification {
         Notification {
             user,

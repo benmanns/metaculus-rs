@@ -30,7 +30,14 @@ pub struct PaginatedUserProfileList {
     pub results: Option<Vec<crate::models::UserProfile>>,
 }
 
+impl Default for PaginatedUserProfileList {
+    fn default() -> Self {
+        Self::new()
+    }
+}
+
 impl PaginatedUserProfileList {
+    #[must_use]
     pub fn new() -> PaginatedUserProfileList {
         PaginatedUserProfileList {
             count: None,

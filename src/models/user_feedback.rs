@@ -17,6 +17,7 @@ pub struct UserFeedback {
 }
 
 impl UserFeedback {
+    #[must_use]
     pub fn new(url: String, text_input: String) -> UserFeedback {
         UserFeedback { url, text_input }
     }

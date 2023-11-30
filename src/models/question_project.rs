@@ -17,6 +17,7 @@ pub struct QuestionProject {
 }
 
 impl QuestionProject {
+    #[must_use]
     pub fn new(id: i32, selected: bool) -> QuestionProject {
         QuestionProject { id, selected }
     }

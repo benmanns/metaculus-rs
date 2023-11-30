@@ -30,7 +30,14 @@ pub struct PatchedUser {
     pub formerly_known_as: Option<String>,
 }
 
+impl Default for PatchedUser {
+    fn default() -> Self {
+        Self::new()
+    }
+}
+
 impl PatchedUser {
+    #[must_use]
     pub fn new() -> PatchedUser {
         PatchedUser {
             id: None,

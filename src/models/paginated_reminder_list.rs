@@ -30,7 +30,14 @@ pub struct PaginatedReminderList {
     pub results: Option<Vec<crate::models::Reminder>>,
 }
 
+impl Default for PaginatedReminderList {
+    fn default() -> Self {
+        Self::new()
+    }
+}
+
 impl PaginatedReminderList {
+    #[must_use]
     pub fn new() -> PaginatedReminderList {
         PaginatedReminderList {
             count: None,

@@ -30,7 +30,14 @@ pub struct PaginatedNotificationList {
     pub results: Option<Vec<crate::models::Notification>>,
 }
 
+impl Default for PaginatedNotificationList {
+    fn default() -> Self {
+        Self::new()
+    }
+}
+
 impl PaginatedNotificationList {
+    #[must_use]
     pub fn new() -> PaginatedNotificationList {
         PaginatedNotificationList {
             count: None,

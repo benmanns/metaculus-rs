@@ -78,6 +78,7 @@ pub struct CommentUpdate {
 }
 
 impl CommentUpdate {
+    #[must_use]
     pub fn new(
         url: String,
         id: i32,

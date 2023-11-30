@@ -21,6 +21,7 @@ pub struct QuestionSummary {
 }
 
 impl QuestionSummary {
+    #[must_use]
     pub fn new(
         id: i32,
         question_id: i32,

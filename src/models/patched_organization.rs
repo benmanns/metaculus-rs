@@ -26,7 +26,14 @@ pub struct PatchedOrganization {
     pub absolute_url: Option<String>,
 }
 
+impl Default for PatchedOrganization {
+    fn default() -> Self {
+        Self::new()
+    }
+}
+
 impl PatchedOrganization {
+    #[must_use]
     pub fn new() -> PatchedOrganization {
         PatchedOrganization {
             id: None,

@@ -30,7 +30,14 @@ pub struct PaginatedOrganizationList {
     pub results: Option<Vec<crate::models::Organization>>,
 }
 
+impl Default for PaginatedOrganizationList {
+    fn default() -> Self {
+        Self::new()
+    }
+}
+
 impl PaginatedOrganizationList {
+    #[must_use]
     pub fn new() -> PaginatedOrganizationList {
         PaginatedOrganizationList {
             count: None,

@@ -78,6 +78,7 @@ pub struct ProjectDetail {
 }
 
 impl ProjectDetail {
+    #[must_use]
     pub fn new(
         id: i32,
         name: String,

@@ -37,6 +37,7 @@ pub struct SubQuestionUpdate {
 }
 
 impl SubQuestionUpdate {
+    #[must_use]
     pub fn new(
         title_short: String,
         possibilities: ::std::collections::HashMap<String, serde_json::Value>,

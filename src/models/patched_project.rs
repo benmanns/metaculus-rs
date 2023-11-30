@@ -69,7 +69,14 @@ pub struct PatchedProject {
     pub is_opt_in: Option<bool>,
 }
 
+impl Default for PatchedProject {
+    fn default() -> Self {
+        Self::new()
+    }
+}
+
 impl PatchedProject {
+    #[must_use]
     pub fn new() -> PatchedProject {
         PatchedProject {
             id: None,

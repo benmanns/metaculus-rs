@@ -23,6 +23,7 @@ pub struct UserProfile {
 }
 
 impl UserProfile {
+    #[must_use]
     pub fn new(id: i32, url: String, bio_html: String) -> UserProfile {
         UserProfile {
             id,

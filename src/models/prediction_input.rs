@@ -15,6 +15,7 @@ pub struct PredictionInput {
 }
 
 impl PredictionInput {
+    #[must_use]
     pub fn new(
         prediction: Option<::std::collections::HashMap<String, serde_json::Value>>,
     ) -> PredictionInput {

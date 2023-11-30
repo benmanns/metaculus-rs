@@ -28,7 +28,14 @@ pub struct PaginatedQuestionUserList {
     pub results: Option<Vec<crate::models::QuestionUser>>,
 }
 
+impl Default for PaginatedQuestionUserList {
+    fn default() -> Self {
+        Self::new()
+    }
+}
+
 impl PaginatedQuestionUserList {
+    #[must_use]
     pub fn new() -> PaginatedQuestionUserList {
         PaginatedQuestionUserList {
             next: None,

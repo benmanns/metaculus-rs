@@ -19,6 +19,7 @@ pub struct QuestionResolve {
 }
 
 impl QuestionResolve {
+    #[must_use]
     pub fn new(
         resolution: Option<f64>,
         date: Option<String>,
