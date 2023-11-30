@@ -2752,7 +2752,6 @@ paths:
   /api2/users/global-cp-reminder/:
     get:
       operationId: users_global_cp_reminder_retrieve
-      parameters: []
       tags:
       - users
       security:
@@ -2768,7 +2767,6 @@ paths:
           description: ''
     post:
       operationId: users_global_cp_reminder_create
-      parameters: []
       tags:
       - users
       requestBody:

@@ -65,6 +65,14 @@ def process(spec)
   clear_parameters(spec, '/api2/users/global-cp-reminder/', 'get', %w[ask_when_reaffirm_question_modal date_joined default_community_visibility default_mp_visibility email first_name formerly_known_as id is_staff is_superuser last_name last_visited level levelTitle permissions powers purchasable_track_record score show_profile_comments supporter_level supporter_since tachyons url username username_change_cost])
   clear_parameters(spec, '/api2/users/global-cp-reminder/', 'post', %w[ask_when_reaffirm_question_modal date_joined default_community_visibility default_mp_visibility email first_name formerly_known_as id is_staff is_superuser last_name last_visited level levelTitle permissions powers purchasable_track_record score show_profile_comments supporter_level supporter_since tachyons url username username_change_cost])
 
+  # Remove empty parameters (that we caused earlier)
+  spec['paths'].each do |path, methods|
+    methods.each do |method, details|
+      details.delete('parameters') if details['parameters'] == []
+    end
+  end
+
+
   # Add servers config to aid generated code and docs
   spec['servers'] = [{ 'url' => 'https://www.metaculus.com' }]
 
