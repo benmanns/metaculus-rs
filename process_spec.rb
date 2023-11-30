@@ -47,6 +47,7 @@ def process(spec)
   # Seemingly unused parameters
   clear_parameters(spec, '/api2/categories/', 'get', %w[id long_name short_name url])
   clear_parameters(spec, '/api2/categories/{bare_id}/', 'get', %w[id long_name short_name url])
+  clear_parameters(spec, '/api2/user-profiles/', 'get', %w[ask_when_reaffirm_question_modal date_joined default_community_visibility default_mp_visibility email first_name formerly_known_as id is_staff is_superuser last_name last_visited level levelTitle permissions powers purchasable_track_record score show_profile_comments supporter_level supporter_since tachyons url username username_change_cost])
 
   # Add servers config to aid generated code and docs
   spec['servers'] = [{ 'url' => 'https://www.metaculus.com' }]
