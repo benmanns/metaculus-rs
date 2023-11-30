@@ -2767,7 +2767,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/User'
+                $ref: '#/components/schemas/GlobalCPReminder'
           description: ''
     post:
       operationId: users_global_cp_reminder_create
@@ -3382,6 +3382,16 @@ components:
       - question
       - user
       - username
+    GlobalCPReminder:
+      type: object
+      properties:
+        enabled:
+          type: boolean
+        delta:
+          type: integer
+      required:
+      - enabled
+      - delta
     Notification:
       type: object
       properties:

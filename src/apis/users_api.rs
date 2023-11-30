@@ -246,7 +246,7 @@ pub async fn users_global_cp_reminder_create(
 
 pub async fn users_global_cp_reminder_retrieve(
     configuration: &configuration::Configuration,
-) -> Result<crate::models::User, Error<UsersGlobalCpReminderRetrieveError>> {
+) -> Result<crate::models::GlobalCpReminder, Error<UsersGlobalCpReminderRetrieveError>> {
     let local_var_configuration = configuration;
 
     // unbox the parameters

@@ -16,6 +16,8 @@ pub mod considerations;
 pub use self::considerations::Considerations;
 pub mod extended_prediction_username;
 pub use self::extended_prediction_username::ExtendedPredictionUsername;
+pub mod global_cp_reminder;
+pub use self::global_cp_reminder::GlobalCpReminder;
 pub mod notification;
 pub use self::notification::Notification;
 pub mod notification_type_enum;

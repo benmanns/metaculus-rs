@@ -11,6 +11,7 @@ docs/CommentUpdate.md
 docs/CommentsApi.md
 docs/Considerations.md
 docs/ExtendedPredictionUsername.md
+docs/GlobalCpReminder.md
 docs/Notification.md
 docs/NotificationTypeEnum.md
 docs/NotificationsApi.md
@@ -114,6 +115,7 @@ src/models/comment_children.rs
 src/models/comment_update.rs
 src/models/considerations.rs
 src/models/extended_prediction_username.rs
+src/models/global_cp_reminder.rs
 src/models/mod.rs
 src/models/notification.rs
 src/models/notification_type_enum.rs

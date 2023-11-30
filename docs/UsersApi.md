@@ -75,7 +75,7 @@ Name | Type | Description  | Required | Notes
 
 ## users_global_cp_reminder_retrieve
 
-> crate::models::User users_global_cp_reminder_retrieve()
+> crate::models::GlobalCpReminder users_global_cp_reminder_retrieve()
 
 
 ### Parameters
@@ -84,7 +84,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**crate::models::User**](User.md)
+[**crate::models::GlobalCpReminder**](GlobalCPReminder.md)
 
 ### Authorization
 

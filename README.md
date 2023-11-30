@@ -270,6 +270,7 @@ Class | Method | HTTP request | Description
  - [CommentUpdate](docs/CommentUpdate.md)
  - [Considerations](docs/Considerations.md)
  - [ExtendedPredictionUsername](docs/ExtendedPredictionUsername.md)
+ - [GlobalCpReminder](docs/GlobalCpReminder.md)
  - [Notification](docs/Notification.md)
  - [NotificationTypeEnum](docs/NotificationTypeEnum.md)
  - [Option](docs/Option.md)

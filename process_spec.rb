@@ -89,6 +89,26 @@ def process(spec)
       },
       'required' => ['predictions', 'questions', 'resolved_questions', 'years_of_predictions']
     }
+
+    check_reminder_schema = false
+    spec['paths']['/api2/users/global-cp-reminder/']['get']['responses']['200']['content'].each do |content_type, content|
+      if content['schema']['$ref'] == '#/components/schemas/User'
+        content['schema']['$ref'] = '#/components/schemas/GlobalCPReminder'
+        check_reminder_schema = true
+      end
+    end
+
+    if check_reminder_schema
+      spec['components']['schemas']['GlobalCPReminder'] ||= {
+        'type' => 'object',
+        'properties' => {
+          'enabled' => { 'type' => 'boolean' },
+          'delta' => { 'type' => 'integer' }
+        },
+        'required' => ['enabled', 'delta']
+      }
+    end
+
     if schemas_were_sorted
       spec['components']['schemas'] = spec['components']['schemas'].sort.to_h
     end
