@@ -40,6 +40,8 @@ docs/PatchedUser.md
 docs/PatchedUserProfile.md
 docs/Prediction.md
 docs/PredictionForDate.md
+docs/PredictionHistory.md
+docs/PredictionHistoryTime.md
 docs/PredictionInput.md
 docs/PredictionUsername.md
 docs/PredictionsApi.md
@@ -142,6 +144,8 @@ src/models/patched_user.rs
 src/models/patched_user_profile.rs
 src/models/prediction.rs
 src/models/prediction_for_date.rs
+src/models/prediction_history.rs
+src/models/prediction_history_time.rs
 src/models/prediction_input.rs
 src/models/prediction_username.rs
 src/models/project.rs

@@ -116,6 +116,44 @@ def process(spec)
       }
     end
 
+    if spec['paths']['/api2/questions/{id}/prediction-history/']['get']['responses']['200'] == { 'description' => 'No response body' }
+      # Add PredictionHistory response schema based on observed response
+      spec['paths']['/api2/questions/{id}/prediction-history/']['get']['responses']['200'] = {
+        'content' => {
+          'application/json' => {
+            'schema' => {
+              '$ref' => '#/components/schemas/PredictionHistory'
+            }
+          }
+        },
+        'description' => ''
+      }
+
+      spec['components']['schemas']['PredictionHistory'] = {
+        'type' => 'object',
+        'properties' => {
+          'question' => { 'type' => 'integer' },
+          'community_prediction' => { 'type' => 'array', 'items' => { '$ref' => '#/components/schemas/PredictionHistoryTime' } },
+          'metaculus_prediction' => { 'type' => 'array', 'items' => { '$ref' => '#/components/schemas/PredictionHistoryTime' } },
+        },
+        'required' => ['question', 'community_prediction', 'metaculus_prediction']
+      }
+
+      spec['components']['schemas']['PredictionHistoryTime'] = {
+        'type' => 'object',
+        'properties' => {
+          't' => { 'type' => 'number', 'format' => 'double' },
+          'y' => { 'type' => 'array', 'items' => { 'type' => 'number', 'format' => 'double' } },
+          'q1' => { 'type' => 'number', 'format' => 'double' },
+          'q2' => { 'type' => 'number', 'format' => 'double' },
+          'q3' => { 'type' => 'number', 'format' => 'double' },
+          'low' => { 'type' => 'number', 'format' => 'double' },
+          'high' => { 'type' => 'number', 'format' => 'double' },
+        },
+        'required' => ['t', 'y', 'q1', 'q2', 'q3', 'low', 'high']
+      }
+    end
+
     if schemas_were_sorted
       spec['components']['schemas'] = spec['components']['schemas'].sort.to_h
     end

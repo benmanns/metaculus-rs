@@ -297,6 +297,8 @@ Class | Method | HTTP request | Description
  - [PatchedUserProfile](docs/PatchedUserProfile.md)
  - [Prediction](docs/Prediction.md)
  - [PredictionForDate](docs/PredictionForDate.md)
+ - [PredictionHistory](docs/PredictionHistory.md)
+ - [PredictionHistoryTime](docs/PredictionHistoryTime.md)
  - [PredictionInput](docs/PredictionInput.md)
  - [PredictionUsername](docs/PredictionUsername.md)
  - [Project](docs/Project.md)

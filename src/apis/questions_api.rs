@@ -984,7 +984,7 @@ pub async fn questions_prediction_for_date_retrieve(
 pub async fn questions_prediction_history_retrieve(
     configuration: &configuration::Configuration,
     params: QuestionsPredictionHistoryRetrieveParams,
-) -> Result<(), Error<QuestionsPredictionHistoryRetrieveError>> {
+) -> Result<crate::models::PredictionHistory, Error<QuestionsPredictionHistoryRetrieveError>> {
     let local_var_configuration = configuration;
 
     // unbox the parameters
@@ -1024,7 +1024,7 @@ pub async fn questions_prediction_history_retrieve(
     let local_var_content = local_var_resp.text().await?;
 
     if !local_var_status.is_client_error() && !local_var_status.is_server_error() {
-        Ok(())
+        serde_json::from_str(&local_var_content).map_err(Error::from)
     } else {
         let local_var_entity: Option<QuestionsPredictionHistoryRetrieveError> =
             serde_json::from_str(&local_var_content).ok();
