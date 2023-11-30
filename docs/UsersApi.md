@@ -204,7 +204,7 @@ Name | Type | Description  | Required | Notes
 
 ## users_partial_update
 
-> crate::models::User users_partial_update(first_name, id, last_name, ask_when_reaffirm_question_modal, date_joined, default_community_visibility, default_mp_visibility, email, formerly_known_as, is_staff, is_superuser, last_visited, level, level_title, permissions, powers, purchasable_track_record, score, show_profile_comments, supporter_level, supporter_since, tachyons, url, username, username_change_cost, patched_user)
+> crate::models::User users_partial_update(id, patched_user)
 
 
 ### Parameters
@@ -212,31 +212,7 @@ Name | Type | Description  | Required | Notes
 
 Name | Type | Description  | Required | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
-**first_name** | **String** |  | [required] |
 **id** | **i32** |  | [required] |
-**last_name** | **String** |  | [required] |
-**ask_when_reaffirm_question_modal** | Option<**bool**> |  |  |
-**date_joined** | Option<**String**> |  |  |
-**default_community_visibility** | Option<**i32**> |  |  |
-**default_mp_visibility** | Option<**i32**> |  |  |
-**email** | Option<**String**> |  |  |
-**formerly_known_as** | Option<**String**> |  |  |
-**is_staff** | Option<**bool**> |  |  |
-**is_superuser** | Option<**bool**> |  |  |
-**last_visited** | Option<**String**> |  |  |
-**level** | Option<**i32**> |  |  |
-**level_title** | Option<**String**> |  |  |
-**permissions** | Option<[**::std::collections::HashMap<String, bool>**](bool.md)> |  |  |
-**powers** | Option<[**::std::collections::HashMap<String, serde_json::Value>**](serde_json::Value.md)> |  |  |
-**purchasable_track_record** | Option<**bool**> |  |  |
-**score** | Option<**i32**> |  |  |
-**show_profile_comments** | Option<**bool**> |  |  |
-**supporter_level** | Option<**i32**> |  |  |
-**supporter_since** | Option<**String**> |  |  |
-**tachyons** | Option<**i32**> |  |  |
-**url** | Option<**String**> |  |  |
-**username** | Option<**String**> |  |  |
-**username_change_cost** | Option<**i32**> |  |  |
 **patched_user** | Option<[**PatchedUser**](PatchedUser.md)> |  |  |
 
 ### Return type
