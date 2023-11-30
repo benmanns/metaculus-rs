@@ -18,7 +18,7 @@ Method | HTTP request | Description
 
 ## users_collect_tachyons_create
 
-> crate::models::User users_collect_tachyons_create(first_name, id2, last_name, ask_when_reaffirm_question_modal, date_joined, default_community_visibility, default_mp_visibility, email, formerly_known_as, id, is_staff, is_superuser, last_visited, level, level_title, permissions, powers, purchasable_track_record, score, show_profile_comments, supporter_level, supporter_since, tachyons, url, username, username_change_cost, user)
+> crate::models::User users_collect_tachyons_create(first_name, id, last_name, ask_when_reaffirm_question_modal, date_joined, default_community_visibility, default_mp_visibility, email, formerly_known_as, is_staff, is_superuser, last_visited, level, level_title, permissions, powers, purchasable_track_record, score, show_profile_comments, supporter_level, supporter_since, tachyons, url, username, username_change_cost, user)
 
 
 ### Parameters
@@ -27,7 +27,7 @@ Method | HTTP request | Description
 Name | Type | Description  | Required | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
 **first_name** | **String** |  | [required] |
-**id2** | **i32** |  | [required] |
+**id** | **i32** |  | [required] |
 **last_name** | **String** |  | [required] |
 **ask_when_reaffirm_question_modal** | Option<**bool**> |  |  |
 **date_joined** | Option<**String**> |  |  |
@@ -35,7 +35,6 @@ Name | Type | Description  | Required | Notes
 **default_mp_visibility** | Option<**i32**> |  |  |
 **email** | Option<**String**> |  |  |
 **formerly_known_as** | Option<**String**> |  |  |
-**id** | Option<**i32**> |  |  |
 **is_staff** | Option<**bool**> |  |  |
 **is_superuser** | Option<**bool**> |  |  |
 **last_visited** | Option<**String**> |  |  |
@@ -230,7 +229,7 @@ Name | Type | Description  | Required | Notes
 
 ## users_partial_update
 
-> crate::models::User users_partial_update(first_name, id2, last_name, ask_when_reaffirm_question_modal, date_joined, default_community_visibility, default_mp_visibility, email, formerly_known_as, id, is_staff, is_superuser, last_visited, level, level_title, permissions, powers, purchasable_track_record, score, show_profile_comments, supporter_level, supporter_since, tachyons, url, username, username_change_cost, patched_user)
+> crate::models::User users_partial_update(first_name, id, last_name, ask_when_reaffirm_question_modal, date_joined, default_community_visibility, default_mp_visibility, email, formerly_known_as, is_staff, is_superuser, last_visited, level, level_title, permissions, powers, purchasable_track_record, score, show_profile_comments, supporter_level, supporter_since, tachyons, url, username, username_change_cost, patched_user)
 
 
 ### Parameters
@@ -239,7 +238,7 @@ Name | Type | Description  | Required | Notes
 Name | Type | Description  | Required | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
 **first_name** | **String** |  | [required] |
-**id2** | **i32** |  | [required] |
+**id** | **i32** |  | [required] |
 **last_name** | **String** |  | [required] |
 **ask_when_reaffirm_question_modal** | Option<**bool**> |  |  |
 **date_joined** | Option<**String**> |  |  |
@@ -247,7 +246,6 @@ Name | Type | Description  | Required | Notes
 **default_mp_visibility** | Option<**i32**> |  |  |
 **email** | Option<**String**> |  |  |
 **formerly_known_as** | Option<**String**> |  |  |
-**id** | Option<**i32**> |  |  |
 **is_staff** | Option<**bool**> |  |  |
 **is_superuser** | Option<**bool**> |  |  |
 **last_visited** | Option<**String**> |  |  |
@@ -284,7 +282,7 @@ Name | Type | Description  | Required | Notes
 
 ## users_purchase_track_record_create
 
-> crate::models::User users_purchase_track_record_create(first_name, id2, last_name, ask_when_reaffirm_question_modal, date_joined, default_community_visibility, default_mp_visibility, email, formerly_known_as, id, is_staff, is_superuser, last_visited, level, level_title, permissions, powers, purchasable_track_record, score, show_profile_comments, supporter_level, supporter_since, tachyons, url, username, username_change_cost, user)
+> crate::models::User users_purchase_track_record_create(first_name, id, last_name, ask_when_reaffirm_question_modal, date_joined, default_community_visibility, default_mp_visibility, email, formerly_known_as, is_staff, is_superuser, last_visited, level, level_title, permissions, powers, purchasable_track_record, score, show_profile_comments, supporter_level, supporter_since, tachyons, url, username, username_change_cost, user)
 
 
 ### Parameters
@@ -293,7 +291,7 @@ Name | Type | Description  | Required | Notes
 Name | Type | Description  | Required | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
 **first_name** | **String** |  | [required] |
-**id2** | **i32** |  | [required] |
+**id** | **i32** |  | [required] |
 **last_name** | **String** |  | [required] |
 **ask_when_reaffirm_question_modal** | Option<**bool**> |  |  |
 **date_joined** | Option<**String**> |  |  |
@@ -301,7 +299,6 @@ Name | Type | Description  | Required | Notes
 **default_mp_visibility** | Option<**i32**> |  |  |
 **email** | Option<**String**> |  |  |
 **formerly_known_as** | Option<**String**> |  |  |
-**id** | Option<**i32**> |  |  |
 **is_staff** | Option<**bool**> |  |  |
 **is_superuser** | Option<**bool**> |  |  |
 **last_visited** | Option<**String**> |  |  |
@@ -338,7 +335,7 @@ Name | Type | Description  | Required | Notes
 
 ## users_retrieve
 
-> crate::models::User users_retrieve(first_name, id2, last_name, ask_when_reaffirm_question_modal, date_joined, default_community_visibility, default_mp_visibility, email, formerly_known_as, id, is_staff, is_superuser, last_visited, level, level_title, permissions, powers, purchasable_track_record, score, show_profile_comments, supporter_level, supporter_since, tachyons, url, username, username_change_cost)
+> crate::models::User users_retrieve(first_name, id, last_name, ask_when_reaffirm_question_modal, date_joined, default_community_visibility, default_mp_visibility, email, formerly_known_as, is_staff, is_superuser, last_visited, level, level_title, permissions, powers, purchasable_track_record, score, show_profile_comments, supporter_level, supporter_since, tachyons, url, username, username_change_cost)
 
 
 ### Parameters
@@ -347,7 +344,7 @@ Name | Type | Description  | Required | Notes
 Name | Type | Description  | Required | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
 **first_name** | **String** |  | [required] |
-**id2** | **i32** |  | [required] |
+**id** | **i32** |  | [required] |
 **last_name** | **String** |  | [required] |
 **ask_when_reaffirm_question_modal** | Option<**bool**> |  |  |
 **date_joined** | Option<**String**> |  |  |
@@ -355,7 +352,6 @@ Name | Type | Description  | Required | Notes
 **default_mp_visibility** | Option<**i32**> |  |  |
 **email** | Option<**String**> |  |  |
 **formerly_known_as** | Option<**String**> |  |  |
-**id** | Option<**i32**> |  |  |
 **is_staff** | Option<**bool**> |  |  |
 **is_superuser** | Option<**bool**> |  |  |
 **last_visited** | Option<**String**> |  |  |
@@ -391,7 +387,7 @@ Name | Type | Description  | Required | Notes
 
 ## users_unlock_power_create
 
-> crate::models::User users_unlock_power_create(first_name, id2, last_name, ask_when_reaffirm_question_modal, date_joined, default_community_visibility, default_mp_visibility, email, formerly_known_as, id, is_staff, is_superuser, last_visited, level, level_title, permissions, powers, purchasable_track_record, score, show_profile_comments, supporter_level, supporter_since, tachyons, url, username, username_change_cost, user)
+> crate::models::User users_unlock_power_create(first_name, id, last_name, ask_when_reaffirm_question_modal, date_joined, default_community_visibility, default_mp_visibility, email, formerly_known_as, is_staff, is_superuser, last_visited, level, level_title, permissions, powers, purchasable_track_record, score, show_profile_comments, supporter_level, supporter_since, tachyons, url, username, username_change_cost, user)
 
 
 ### Parameters
@@ -400,7 +396,7 @@ Name | Type | Description  | Required | Notes
 Name | Type | Description  | Required | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
 **first_name** | **String** |  | [required] |
-**id2** | **i32** |  | [required] |
+**id** | **i32** |  | [required] |
 **last_name** | **String** |  | [required] |
 **ask_when_reaffirm_question_modal** | Option<**bool**> |  |  |
 **date_joined** | Option<**String**> |  |  |
@@ -408,7 +404,6 @@ Name | Type | Description  | Required | Notes
 **default_mp_visibility** | Option<**i32**> |  |  |
 **email** | Option<**String**> |  |  |
 **formerly_known_as** | Option<**String**> |  |  |
-**id** | Option<**i32**> |  |  |
 **is_staff** | Option<**bool**> |  |  |
 **is_superuser** | Option<**bool**> |  |  |
 **last_visited** | Option<**String**> |  |  |
@@ -445,7 +440,7 @@ Name | Type | Description  | Required | Notes
 
 ## users_update
 
-> crate::models::User users_update(first_name, id2, last_name, ask_when_reaffirm_question_modal, date_joined, default_community_visibility, default_mp_visibility, email, formerly_known_as, id, is_staff, is_superuser, last_visited, level, level_title, permissions, powers, purchasable_track_record, score, show_profile_comments, supporter_level, supporter_since, tachyons, url, username, username_change_cost, user)
+> crate::models::User users_update(first_name, id, last_name, ask_when_reaffirm_question_modal, date_joined, default_community_visibility, default_mp_visibility, email, formerly_known_as, is_staff, is_superuser, last_visited, level, level_title, permissions, powers, purchasable_track_record, score, show_profile_comments, supporter_level, supporter_since, tachyons, url, username, username_change_cost, user)
 
 
 ### Parameters
@@ -454,7 +449,7 @@ Name | Type | Description  | Required | Notes
 Name | Type | Description  | Required | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
 **first_name** | **String** |  | [required] |
-**id2** | **i32** |  | [required] |
+**id** | **i32** |  | [required] |
 **last_name** | **String** |  | [required] |
 **ask_when_reaffirm_question_modal** | Option<**bool**> |  |  |
 **date_joined** | Option<**String**> |  |  |
@@ -462,7 +457,6 @@ Name | Type | Description  | Required | Notes
 **default_mp_visibility** | Option<**i32**> |  |  |
 **email** | Option<**String**> |  |  |
 **formerly_known_as** | Option<**String**> |  |  |
-**id** | Option<**i32**> |  |  |
 **is_staff** | Option<**bool**> |  |  |
 **is_superuser** | Option<**bool**> |  |  |
 **last_visited** | Option<**String**> |  |  |

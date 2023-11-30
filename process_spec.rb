@@ -40,6 +40,10 @@ def process(spec)
 
         # in: path but not in path, so we should remove it
         details['parameters'].reject! { |p| p['in'] == 'path' && !path.include?("{#{p['name']}}") }
+
+        # in: query, but also in: path, so we should remove query
+        path_parameters = details['parameters'].select { |p| p['in'] == 'path' }.map { |p| p['name'] }
+        details['parameters'].reject! { |p| p['in'] == 'query' && path_parameters.include?(p['name']) }
       end
     end
   end

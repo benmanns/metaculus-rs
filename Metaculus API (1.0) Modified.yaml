@@ -2457,10 +2457,6 @@ paths:
     get:
       operationId: user_profiles_retrieve
       parameters:
-      - in: query
-        name: id
-        schema:
-          type: integer
       - in: path
         name: id
         schema:
@@ -2524,10 +2520,6 @@ paths:
         schema:
           type: string
           minLength: 1
-      - in: query
-        name: id
-        schema:
-          type: integer
       - in: path
         name: id
         schema:
@@ -2679,10 +2671,6 @@ paths:
         schema:
           type: string
           minLength: 1
-      - in: query
-        name: id
-        schema:
-          type: integer
       - in: path
         name: id
         schema:
@@ -2981,10 +2969,6 @@ paths:
         schema:
           type: string
           minLength: 1
-      - in: query
-        name: id
-        schema:
-          type: integer
       - in: path
         name: id
         schema:
@@ -3126,10 +3110,6 @@ paths:
         schema:
           type: string
           minLength: 1
-      - in: query
-        name: id
-        schema:
-          type: integer
       - in: path
         name: id
         schema:
@@ -3281,10 +3261,6 @@ paths:
         schema:
           type: string
           minLength: 1
-      - in: query
-        name: id
-        schema:
-          type: integer
       - in: path
         name: id
         schema:
@@ -3437,10 +3413,6 @@ paths:
         schema:
           type: string
           minLength: 1
-      - in: query
-        name: id
-        schema:
-          type: integer
       - in: path
         name: id
         schema:
@@ -3593,10 +3565,6 @@ paths:
         schema:
           type: string
           minLength: 1
-      - in: query
-        name: id
-        schema:
-          type: integer
       - in: path
         name: id
         schema:
@@ -3749,10 +3717,6 @@ paths:
         schema:
           type: string
           minLength: 1
-      - in: query
-        name: id
-        schema:
-          type: integer
       - in: path
         name: id
         schema:

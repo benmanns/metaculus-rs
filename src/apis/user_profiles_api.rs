@@ -24,7 +24,7 @@ pub struct UserProfilesListParams {
 #[derive(Clone, Debug)]
 pub struct UserProfilesPartialUpdateParams {
     pub first_name: String,
-    pub id2: i32,
+    pub id: i32,
     pub last_name: String,
     pub ask_when_reaffirm_question_modal: Option<bool>,
     pub date_joined: Option<String>,
@@ -32,7 +32,6 @@ pub struct UserProfilesPartialUpdateParams {
     pub default_mp_visibility: Option<i32>,
     pub email: Option<String>,
     pub formerly_known_as: Option<String>,
-    pub id: Option<i32>,
     pub is_staff: Option<bool>,
     pub is_superuser: Option<bool>,
     pub last_visited: Option<String>,
@@ -55,15 +54,14 @@ pub struct UserProfilesPartialUpdateParams {
 /// struct for passing parameters to the method [`user_profiles_retrieve`]
 #[derive(Clone, Debug)]
 pub struct UserProfilesRetrieveParams {
-    pub id2: i32,
-    pub id: Option<i32>,
+    pub id: i32,
 }
 
 /// struct for passing parameters to the method [`user_profiles_update`]
 #[derive(Clone, Debug)]
 pub struct UserProfilesUpdateParams {
     pub first_name: String,
-    pub id2: i32,
+    pub id: i32,
     pub last_name: String,
     pub ask_when_reaffirm_question_modal: Option<bool>,
     pub date_joined: Option<String>,
@@ -71,7 +69,6 @@ pub struct UserProfilesUpdateParams {
     pub default_mp_visibility: Option<i32>,
     pub email: Option<String>,
     pub formerly_known_as: Option<String>,
-    pub id: Option<i32>,
     pub is_staff: Option<bool>,
     pub is_superuser: Option<bool>,
     pub last_visited: Option<String>,
@@ -185,7 +182,7 @@ pub async fn user_profiles_partial_update(
 
     // unbox the parameters
     let first_name = params.first_name;
-    let id2 = params.id2;
+    let id = params.id;
     let last_name = params.last_name;
     let ask_when_reaffirm_question_modal = params.ask_when_reaffirm_question_modal;
     let date_joined = params.date_joined;
@@ -193,7 +190,6 @@ pub async fn user_profiles_partial_update(
     let default_mp_visibility = params.default_mp_visibility;
     let email = params.email;
     let formerly_known_as = params.formerly_known_as;
-    let id = params.id;
     let is_staff = params.is_staff;
     let is_superuser = params.is_superuser;
     let last_visited = params.last_visited;
@@ -217,7 +213,7 @@ pub async fn user_profiles_partial_update(
     let local_var_uri_str = format!(
         "{}/api2/user-profiles/{id}/",
         local_var_configuration.base_path,
-        id = id2
+        id = id
     );
     let mut local_var_req_builder =
         local_var_client.request(reqwest::Method::PATCH, local_var_uri_str.as_str());
@@ -248,9 +244,6 @@ pub async fn user_profiles_partial_update(
     if let Some(ref local_var_str) = formerly_known_as {
         local_var_req_builder =
             local_var_req_builder.query(&[("formerly_known_as", &local_var_str.to_string())]);
-    }
-    if let Some(ref local_var_str) = id {
-        local_var_req_builder = local_var_req_builder.query(&[("id", &local_var_str.to_string())]);
     }
     if let Some(ref local_var_str) = is_staff {
         local_var_req_builder =
@@ -363,7 +356,6 @@ pub async fn user_profiles_retrieve(
     let local_var_configuration = configuration;
 
     // unbox the parameters
-    let id2 = params.id2;
     let id = params.id;
 
     let local_var_client = &local_var_configuration.client;
@@ -371,14 +363,11 @@ pub async fn user_profiles_retrieve(
     let local_var_uri_str = format!(
         "{}/api2/user-profiles/{id}/",
         local_var_configuration.base_path,
-        id = id2
+        id = id
     );
     let mut local_var_req_builder =
         local_var_client.request(reqwest::Method::GET, local_var_uri_str.as_str());
 
-    if let Some(ref local_var_str) = id {
-        local_var_req_builder = local_var_req_builder.query(&[("id", &local_var_str.to_string())]);
-    }
     if let Some(ref local_var_user_agent) = local_var_configuration.user_agent {
         local_var_req_builder =
             local_var_req_builder.header(reqwest::header::USER_AGENT, local_var_user_agent.clone());
@@ -426,7 +415,7 @@ pub async fn user_profiles_update(
 
     // unbox the parameters
     let first_name = params.first_name;
-    let id2 = params.id2;
+    let id = params.id;
     let last_name = params.last_name;
     let ask_when_reaffirm_question_modal = params.ask_when_reaffirm_question_modal;
     let date_joined = params.date_joined;
@@ -434,7 +423,6 @@ pub async fn user_profiles_update(
     let default_mp_visibility = params.default_mp_visibility;
     let email = params.email;
     let formerly_known_as = params.formerly_known_as;
-    let id = params.id;
     let is_staff = params.is_staff;
     let is_superuser = params.is_superuser;
     let last_visited = params.last_visited;
@@ -458,7 +446,7 @@ pub async fn user_profiles_update(
     let local_var_uri_str = format!(
         "{}/api2/user-profiles/{id}/",
         local_var_configuration.base_path,
-        id = id2
+        id = id
     );
     let mut local_var_req_builder =
         local_var_client.request(reqwest::Method::PUT, local_var_uri_str.as_str());
@@ -489,9 +477,6 @@ pub async fn user_profiles_update(
     if let Some(ref local_var_str) = formerly_known_as {
         local_var_req_builder =
             local_var_req_builder.query(&[("formerly_known_as", &local_var_str.to_string())]);
-    }
-    if let Some(ref local_var_str) = id {
-        local_var_req_builder = local_var_req_builder.query(&[("id", &local_var_str.to_string())]);
     }
     if let Some(ref local_var_str) = is_staff {
         local_var_req_builder =

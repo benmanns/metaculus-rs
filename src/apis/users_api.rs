@@ -17,7 +17,7 @@ use crate::apis::ResponseContent;
 #[derive(Clone, Debug)]
 pub struct UsersCollectTachyonsCreateParams {
     pub first_name: String,
-    pub id2: i32,
+    pub id: i32,
     pub last_name: String,
     pub ask_when_reaffirm_question_modal: Option<bool>,
     pub date_joined: Option<String>,
@@ -25,7 +25,6 @@ pub struct UsersCollectTachyonsCreateParams {
     pub default_mp_visibility: Option<i32>,
     pub email: Option<String>,
     pub formerly_known_as: Option<String>,
-    pub id: Option<i32>,
     pub is_staff: Option<bool>,
     pub is_superuser: Option<bool>,
     pub last_visited: Option<String>,
@@ -142,7 +141,7 @@ pub struct UsersListParams {
 #[derive(Clone, Debug)]
 pub struct UsersPartialUpdateParams {
     pub first_name: String,
-    pub id2: i32,
+    pub id: i32,
     pub last_name: String,
     pub ask_when_reaffirm_question_modal: Option<bool>,
     pub date_joined: Option<String>,
@@ -150,7 +149,6 @@ pub struct UsersPartialUpdateParams {
     pub default_mp_visibility: Option<i32>,
     pub email: Option<String>,
     pub formerly_known_as: Option<String>,
-    pub id: Option<i32>,
     pub is_staff: Option<bool>,
     pub is_superuser: Option<bool>,
     pub last_visited: Option<String>,
@@ -174,7 +172,7 @@ pub struct UsersPartialUpdateParams {
 #[derive(Clone, Debug)]
 pub struct UsersPurchaseTrackRecordCreateParams {
     pub first_name: String,
-    pub id2: i32,
+    pub id: i32,
     pub last_name: String,
     pub ask_when_reaffirm_question_modal: Option<bool>,
     pub date_joined: Option<String>,
@@ -182,7 +180,6 @@ pub struct UsersPurchaseTrackRecordCreateParams {
     pub default_mp_visibility: Option<i32>,
     pub email: Option<String>,
     pub formerly_known_as: Option<String>,
-    pub id: Option<i32>,
     pub is_staff: Option<bool>,
     pub is_superuser: Option<bool>,
     pub last_visited: Option<String>,
@@ -206,7 +203,7 @@ pub struct UsersPurchaseTrackRecordCreateParams {
 #[derive(Clone, Debug)]
 pub struct UsersRetrieveParams {
     pub first_name: String,
-    pub id2: i32,
+    pub id: i32,
     pub last_name: String,
     pub ask_when_reaffirm_question_modal: Option<bool>,
     pub date_joined: Option<String>,
@@ -214,7 +211,6 @@ pub struct UsersRetrieveParams {
     pub default_mp_visibility: Option<i32>,
     pub email: Option<String>,
     pub formerly_known_as: Option<String>,
-    pub id: Option<i32>,
     pub is_staff: Option<bool>,
     pub is_superuser: Option<bool>,
     pub last_visited: Option<String>,
@@ -237,7 +233,7 @@ pub struct UsersRetrieveParams {
 #[derive(Clone, Debug)]
 pub struct UsersUnlockPowerCreateParams {
     pub first_name: String,
-    pub id2: i32,
+    pub id: i32,
     pub last_name: String,
     pub ask_when_reaffirm_question_modal: Option<bool>,
     pub date_joined: Option<String>,
@@ -245,7 +241,6 @@ pub struct UsersUnlockPowerCreateParams {
     pub default_mp_visibility: Option<i32>,
     pub email: Option<String>,
     pub formerly_known_as: Option<String>,
-    pub id: Option<i32>,
     pub is_staff: Option<bool>,
     pub is_superuser: Option<bool>,
     pub last_visited: Option<String>,
@@ -269,7 +264,7 @@ pub struct UsersUnlockPowerCreateParams {
 #[derive(Clone, Debug)]
 pub struct UsersUpdateParams {
     pub first_name: String,
-    pub id2: i32,
+    pub id: i32,
     pub last_name: String,
     pub ask_when_reaffirm_question_modal: Option<bool>,
     pub date_joined: Option<String>,
@@ -277,7 +272,6 @@ pub struct UsersUpdateParams {
     pub default_mp_visibility: Option<i32>,
     pub email: Option<String>,
     pub formerly_known_as: Option<String>,
-    pub id: Option<i32>,
     pub is_staff: Option<bool>,
     pub is_superuser: Option<bool>,
     pub last_visited: Option<String>,
@@ -368,7 +362,7 @@ pub async fn users_collect_tachyons_create(
 
     // unbox the parameters
     let first_name = params.first_name;
-    let id2 = params.id2;
+    let id = params.id;
     let last_name = params.last_name;
     let ask_when_reaffirm_question_modal = params.ask_when_reaffirm_question_modal;
     let date_joined = params.date_joined;
@@ -376,7 +370,6 @@ pub async fn users_collect_tachyons_create(
     let default_mp_visibility = params.default_mp_visibility;
     let email = params.email;
     let formerly_known_as = params.formerly_known_as;
-    let id = params.id;
     let is_staff = params.is_staff;
     let is_superuser = params.is_superuser;
     let last_visited = params.last_visited;
@@ -400,7 +393,7 @@ pub async fn users_collect_tachyons_create(
     let local_var_uri_str = format!(
         "{}/api2/users/{id}/collect-tachyons/",
         local_var_configuration.base_path,
-        id = id2
+        id = id
     );
     let mut local_var_req_builder =
         local_var_client.request(reqwest::Method::POST, local_var_uri_str.as_str());
@@ -431,9 +424,6 @@ pub async fn users_collect_tachyons_create(
     if let Some(ref local_var_str) = formerly_known_as {
         local_var_req_builder =
             local_var_req_builder.query(&[("formerly_known_as", &local_var_str.to_string())]);
-    }
-    if let Some(ref local_var_str) = id {
-        local_var_req_builder = local_var_req_builder.query(&[("id", &local_var_str.to_string())]);
     }
     if let Some(ref local_var_str) = is_staff {
         local_var_req_builder =
@@ -1076,7 +1066,7 @@ pub async fn users_partial_update(
 
     // unbox the parameters
     let first_name = params.first_name;
-    let id2 = params.id2;
+    let id = params.id;
     let last_name = params.last_name;
     let ask_when_reaffirm_question_modal = params.ask_when_reaffirm_question_modal;
     let date_joined = params.date_joined;
@@ -1084,7 +1074,6 @@ pub async fn users_partial_update(
     let default_mp_visibility = params.default_mp_visibility;
     let email = params.email;
     let formerly_known_as = params.formerly_known_as;
-    let id = params.id;
     let is_staff = params.is_staff;
     let is_superuser = params.is_superuser;
     let last_visited = params.last_visited;
@@ -1108,7 +1097,7 @@ pub async fn users_partial_update(
     let local_var_uri_str = format!(
         "{}/api2/users/{id}/",
         local_var_configuration.base_path,
-        id = id2
+        id = id
     );
     let mut local_var_req_builder =
         local_var_client.request(reqwest::Method::PATCH, local_var_uri_str.as_str());
@@ -1139,9 +1128,6 @@ pub async fn users_partial_update(
     if let Some(ref local_var_str) = formerly_known_as {
         local_var_req_builder =
             local_var_req_builder.query(&[("formerly_known_as", &local_var_str.to_string())]);
-    }
-    if let Some(ref local_var_str) = id {
-        local_var_req_builder = local_var_req_builder.query(&[("id", &local_var_str.to_string())]);
     }
     if let Some(ref local_var_str) = is_staff {
         local_var_req_builder =
@@ -1255,7 +1241,7 @@ pub async fn users_purchase_track_record_create(
 
     // unbox the parameters
     let first_name = params.first_name;
-    let id2 = params.id2;
+    let id = params.id;
     let last_name = params.last_name;
     let ask_when_reaffirm_question_modal = params.ask_when_reaffirm_question_modal;
     let date_joined = params.date_joined;
@@ -1263,7 +1249,6 @@ pub async fn users_purchase_track_record_create(
     let default_mp_visibility = params.default_mp_visibility;
     let email = params.email;
     let formerly_known_as = params.formerly_known_as;
-    let id = params.id;
     let is_staff = params.is_staff;
     let is_superuser = params.is_superuser;
     let last_visited = params.last_visited;
@@ -1287,7 +1272,7 @@ pub async fn users_purchase_track_record_create(
     let local_var_uri_str = format!(
         "{}/api2/users/{id}/purchase-track-record/",
         local_var_configuration.base_path,
-        id = id2
+        id = id
     );
     let mut local_var_req_builder =
         local_var_client.request(reqwest::Method::POST, local_var_uri_str.as_str());
@@ -1318,9 +1303,6 @@ pub async fn users_purchase_track_record_create(
     if let Some(ref local_var_str) = formerly_known_as {
         local_var_req_builder =
             local_var_req_builder.query(&[("formerly_known_as", &local_var_str.to_string())]);
-    }
-    if let Some(ref local_var_str) = id {
-        local_var_req_builder = local_var_req_builder.query(&[("id", &local_var_str.to_string())]);
     }
     if let Some(ref local_var_str) = is_staff {
         local_var_req_builder =
@@ -1434,7 +1416,7 @@ pub async fn users_retrieve(
 
     // unbox the parameters
     let first_name = params.first_name;
-    let id2 = params.id2;
+    let id = params.id;
     let last_name = params.last_name;
     let ask_when_reaffirm_question_modal = params.ask_when_reaffirm_question_modal;
     let date_joined = params.date_joined;
@@ -1442,7 +1424,6 @@ pub async fn users_retrieve(
     let default_mp_visibility = params.default_mp_visibility;
     let email = params.email;
     let formerly_known_as = params.formerly_known_as;
-    let id = params.id;
     let is_staff = params.is_staff;
     let is_superuser = params.is_superuser;
     let last_visited = params.last_visited;
@@ -1465,7 +1446,7 @@ pub async fn users_retrieve(
     let local_var_uri_str = format!(
         "{}/api2/users/{id}/",
         local_var_configuration.base_path,
-        id = id2
+        id = id
     );
     let mut local_var_req_builder =
         local_var_client.request(reqwest::Method::GET, local_var_uri_str.as_str());
@@ -1496,9 +1477,6 @@ pub async fn users_retrieve(
     if let Some(ref local_var_str) = formerly_known_as {
         local_var_req_builder =
             local_var_req_builder.query(&[("formerly_known_as", &local_var_str.to_string())]);
-    }
-    if let Some(ref local_var_str) = id {
-        local_var_req_builder = local_var_req_builder.query(&[("id", &local_var_str.to_string())]);
     }
     if let Some(ref local_var_str) = is_staff {
         local_var_req_builder =
@@ -1611,7 +1589,7 @@ pub async fn users_unlock_power_create(
 
     // unbox the parameters
     let first_name = params.first_name;
-    let id2 = params.id2;
+    let id = params.id;
     let last_name = params.last_name;
     let ask_when_reaffirm_question_modal = params.ask_when_reaffirm_question_modal;
     let date_joined = params.date_joined;
@@ -1619,7 +1597,6 @@ pub async fn users_unlock_power_create(
     let default_mp_visibility = params.default_mp_visibility;
     let email = params.email;
     let formerly_known_as = params.formerly_known_as;
-    let id = params.id;
     let is_staff = params.is_staff;
     let is_superuser = params.is_superuser;
     let last_visited = params.last_visited;
@@ -1643,7 +1620,7 @@ pub async fn users_unlock_power_create(
     let local_var_uri_str = format!(
         "{}/api2/users/{id}/unlock-power/",
         local_var_configuration.base_path,
-        id = id2
+        id = id
     );
     let mut local_var_req_builder =
         local_var_client.request(reqwest::Method::POST, local_var_uri_str.as_str());
@@ -1674,9 +1651,6 @@ pub async fn users_unlock_power_create(
     if let Some(ref local_var_str) = formerly_known_as {
         local_var_req_builder =
             local_var_req_builder.query(&[("formerly_known_as", &local_var_str.to_string())]);
-    }
-    if let Some(ref local_var_str) = id {
-        local_var_req_builder = local_var_req_builder.query(&[("id", &local_var_str.to_string())]);
     }
     if let Some(ref local_var_str) = is_staff {
         local_var_req_builder =
@@ -1790,7 +1764,7 @@ pub async fn users_update(
 
     // unbox the parameters
     let first_name = params.first_name;
-    let id2 = params.id2;
+    let id = params.id;
     let last_name = params.last_name;
     let ask_when_reaffirm_question_modal = params.ask_when_reaffirm_question_modal;
     let date_joined = params.date_joined;
@@ -1798,7 +1772,6 @@ pub async fn users_update(
     let default_mp_visibility = params.default_mp_visibility;
     let email = params.email;
     let formerly_known_as = params.formerly_known_as;
-    let id = params.id;
     let is_staff = params.is_staff;
     let is_superuser = params.is_superuser;
     let last_visited = params.last_visited;
@@ -1822,7 +1795,7 @@ pub async fn users_update(
     let local_var_uri_str = format!(
         "{}/api2/users/{id}/",
         local_var_configuration.base_path,
-        id = id2
+        id = id
     );
     let mut local_var_req_builder =
         local_var_client.request(reqwest::Method::PUT, local_var_uri_str.as_str());
@@ -1853,9 +1826,6 @@ pub async fn users_update(
     if let Some(ref local_var_str) = formerly_known_as {
         local_var_req_builder =
             local_var_req_builder.query(&[("formerly_known_as", &local_var_str.to_string())]);
-    }
-    if let Some(ref local_var_str) = id {
-        local_var_req_builder = local_var_req_builder.query(&[("id", &local_var_str.to_string())]);
     }
     if let Some(ref local_var_str) = is_staff {
         local_var_req_builder =

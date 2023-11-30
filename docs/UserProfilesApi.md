@@ -41,7 +41,7 @@ Name | Type | Description  | Required | Notes
 
 ## user_profiles_partial_update
 
-> crate::models::UserProfile user_profiles_partial_update(first_name, id2, last_name, ask_when_reaffirm_question_modal, date_joined, default_community_visibility, default_mp_visibility, email, formerly_known_as, id, is_staff, is_superuser, last_visited, level, level_title, permissions, powers, purchasable_track_record, score, show_profile_comments, supporter_level, supporter_since, tachyons, url, username, username_change_cost, patched_user_profile)
+> crate::models::UserProfile user_profiles_partial_update(first_name, id, last_name, ask_when_reaffirm_question_modal, date_joined, default_community_visibility, default_mp_visibility, email, formerly_known_as, is_staff, is_superuser, last_visited, level, level_title, permissions, powers, purchasable_track_record, score, show_profile_comments, supporter_level, supporter_since, tachyons, url, username, username_change_cost, patched_user_profile)
 
 
 ### Parameters
@@ -50,7 +50,7 @@ Name | Type | Description  | Required | Notes
 Name | Type | Description  | Required | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
 **first_name** | **String** |  | [required] |
-**id2** | **i32** |  | [required] |
+**id** | **i32** |  | [required] |
 **last_name** | **String** |  | [required] |
 **ask_when_reaffirm_question_modal** | Option<**bool**> |  |  |
 **date_joined** | Option<**String**> |  |  |
@@ -58,7 +58,6 @@ Name | Type | Description  | Required | Notes
 **default_mp_visibility** | Option<**i32**> |  |  |
 **email** | Option<**String**> |  |  |
 **formerly_known_as** | Option<**String**> |  |  |
-**id** | Option<**i32**> |  |  |
 **is_staff** | Option<**bool**> |  |  |
 **is_superuser** | Option<**bool**> |  |  |
 **last_visited** | Option<**String**> |  |  |
@@ -95,7 +94,7 @@ Name | Type | Description  | Required | Notes
 
 ## user_profiles_retrieve
 
-> crate::models::UserProfile user_profiles_retrieve(id2, id)
+> crate::models::UserProfile user_profiles_retrieve(id)
 
 
 ### Parameters
@@ -103,8 +102,7 @@ Name | Type | Description  | Required | Notes
 
 Name | Type | Description  | Required | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
-**id2** | **i32** |  | [required] |
-**id** | Option<**i32**> |  |  |
+**id** | **i32** |  | [required] |
 
 ### Return type
 
@@ -124,7 +122,7 @@ Name | Type | Description  | Required | Notes
 
 ## user_profiles_update
 
-> crate::models::UserProfile user_profiles_update(first_name, id2, last_name, ask_when_reaffirm_question_modal, date_joined, default_community_visibility, default_mp_visibility, email, formerly_known_as, id, is_staff, is_superuser, last_visited, level, level_title, permissions, powers, purchasable_track_record, score, show_profile_comments, supporter_level, supporter_since, tachyons, url, username, username_change_cost, user_profile)
+> crate::models::UserProfile user_profiles_update(first_name, id, last_name, ask_when_reaffirm_question_modal, date_joined, default_community_visibility, default_mp_visibility, email, formerly_known_as, is_staff, is_superuser, last_visited, level, level_title, permissions, powers, purchasable_track_record, score, show_profile_comments, supporter_level, supporter_since, tachyons, url, username, username_change_cost, user_profile)
 
 
 ### Parameters
@@ -133,7 +131,7 @@ Name | Type | Description  | Required | Notes
 Name | Type | Description  | Required | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
 **first_name** | **String** |  | [required] |
-**id2** | **i32** |  | [required] |
+**id** | **i32** |  | [required] |
 **last_name** | **String** |  | [required] |
 **ask_when_reaffirm_question_modal** | Option<**bool**> |  |  |
 **date_joined** | Option<**String**> |  |  |
@@ -141,7 +139,6 @@ Name | Type | Description  | Required | Notes
 **default_mp_visibility** | Option<**i32**> |  |  |
 **email** | Option<**String**> |  |  |
 **formerly_known_as** | Option<**String**> |  |  |
-**id** | Option<**i32**> |  |  |
 **is_staff** | Option<**bool**> |  |  |
 **is_superuser** | Option<**bool**> |  |  |
 **last_visited** | Option<**String**> |  |  |
