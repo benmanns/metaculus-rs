@@ -47,7 +47,7 @@ Name | Type | Description  | Required | Notes
 
 ## users_global_cp_reminder_create
 
-> crate::models::User users_global_cp_reminder_create(user)
+> crate::models::GlobalCpReminder users_global_cp_reminder_create(global_cp_reminder)
 
 
 ### Parameters
@@ -55,11 +55,11 @@ Name | Type | Description  | Required | Notes
 
 Name | Type | Description  | Required | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
-**user** | Option<[**User**](User.md)> |  |  |
+**global_cp_reminder** | Option<[**GlobalCpReminder**](GlobalCpReminder.md)> |  |  |
 
 ### Return type
 
-[**crate::models::User**](User.md)
+[**crate::models::GlobalCpReminder**](GlobalCPReminder.md)
 
 ### Authorization
 

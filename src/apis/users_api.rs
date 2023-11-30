@@ -23,7 +23,7 @@ pub struct UsersCollectTachyonsCreateParams {
 /// struct for passing parameters to the method [`users_global_cp_reminder_create`]
 #[derive(Clone, Debug)]
 pub struct UsersGlobalCpReminderCreateParams {
-    pub user: Option<crate::models::User>,
+    pub global_cp_reminder: Option<crate::models::GlobalCpReminder>,
 }
 
 /// struct for passing parameters to the method [`users_list`]
@@ -191,11 +191,11 @@ pub async fn users_collect_tachyons_create(
 pub async fn users_global_cp_reminder_create(
     configuration: &configuration::Configuration,
     params: UsersGlobalCpReminderCreateParams,
-) -> Result<crate::models::User, Error<UsersGlobalCpReminderCreateError>> {
+) -> Result<crate::models::GlobalCpReminder, Error<UsersGlobalCpReminderCreateError>> {
     let local_var_configuration = configuration;
 
     // unbox the parameters
-    let user = params.user;
+    let global_cp_reminder = params.global_cp_reminder;
 
     let local_var_client = &local_var_configuration.client;
 
@@ -222,7 +222,7 @@ pub async fn users_global_cp_reminder_create(
         };
         local_var_req_builder = local_var_req_builder.header("Authorization", local_var_value);
     };
-    local_var_req_builder = local_var_req_builder.json(&user);
+    local_var_req_builder = local_var_req_builder.json(&global_cp_reminder);
 
     let local_var_req = local_var_req_builder.build()?;
     let local_var_resp = local_var_client.execute(local_var_req).await?;

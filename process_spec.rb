@@ -91,10 +91,17 @@ def process(spec)
     }
 
     check_reminder_schema = false
-    spec['paths']['/api2/users/global-cp-reminder/']['get']['responses']['200']['content'].each do |content_type, content|
-      if content['schema']['$ref'] == '#/components/schemas/User'
-        content['schema']['$ref'] = '#/components/schemas/GlobalCPReminder'
-        check_reminder_schema = true
+    reminder_schema_lists = [
+      spec['paths']['/api2/users/global-cp-reminder/']['get']['responses']['200']['content'],
+      spec['paths']['/api2/users/global-cp-reminder/']['post']['requestBody']['content'],
+      spec['paths']['/api2/users/global-cp-reminder/']['post']['responses']['200']['content']
+    ]
+    reminder_schema_lists.each do |list|
+      list.each do |content_type, content|
+        if content['schema']['$ref'] == '#/components/schemas/User'
+          content['schema']['$ref'] = '#/components/schemas/GlobalCPReminder'
+          check_reminder_schema = true
+        end
       end
     end
 
