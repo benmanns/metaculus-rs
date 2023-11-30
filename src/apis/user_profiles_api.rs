@@ -23,31 +23,7 @@ pub struct UserProfilesListParams {
 /// struct for passing parameters to the method [`user_profiles_partial_update`]
 #[derive(Clone, Debug)]
 pub struct UserProfilesPartialUpdateParams {
-    pub first_name: String,
     pub id: i32,
-    pub last_name: String,
-    pub ask_when_reaffirm_question_modal: Option<bool>,
-    pub date_joined: Option<String>,
-    pub default_community_visibility: Option<i32>,
-    pub default_mp_visibility: Option<i32>,
-    pub email: Option<String>,
-    pub formerly_known_as: Option<String>,
-    pub is_staff: Option<bool>,
-    pub is_superuser: Option<bool>,
-    pub last_visited: Option<String>,
-    pub level: Option<i32>,
-    pub level_title: Option<String>,
-    pub permissions: Option<::std::collections::HashMap<String, bool>>,
-    pub powers: Option<::std::collections::HashMap<String, serde_json::Value>>,
-    pub purchasable_track_record: Option<bool>,
-    pub score: Option<i32>,
-    pub show_profile_comments: Option<bool>,
-    pub supporter_level: Option<i32>,
-    pub supporter_since: Option<String>,
-    pub tachyons: Option<i32>,
-    pub url: Option<String>,
-    pub username: Option<String>,
-    pub username_change_cost: Option<i32>,
     pub patched_user_profile: Option<crate::models::PatchedUserProfile>,
 }
 
@@ -157,31 +133,7 @@ pub async fn user_profiles_partial_update(
     let local_var_configuration = configuration;
 
     // unbox the parameters
-    let first_name = params.first_name;
     let id = params.id;
-    let last_name = params.last_name;
-    let ask_when_reaffirm_question_modal = params.ask_when_reaffirm_question_modal;
-    let date_joined = params.date_joined;
-    let default_community_visibility = params.default_community_visibility;
-    let default_mp_visibility = params.default_mp_visibility;
-    let email = params.email;
-    let formerly_known_as = params.formerly_known_as;
-    let is_staff = params.is_staff;
-    let is_superuser = params.is_superuser;
-    let last_visited = params.last_visited;
-    let level = params.level;
-    let level_title = params.level_title;
-    let permissions = params.permissions;
-    let powers = params.powers;
-    let purchasable_track_record = params.purchasable_track_record;
-    let score = params.score;
-    let show_profile_comments = params.show_profile_comments;
-    let supporter_level = params.supporter_level;
-    let supporter_since = params.supporter_since;
-    let tachyons = params.tachyons;
-    let url = params.url;
-    let username = params.username;
-    let username_change_cost = params.username_change_cost;
     let patched_user_profile = params.patched_user_profile;
 
     let local_var_client = &local_var_configuration.client;
@@ -194,97 +146,6 @@ pub async fn user_profiles_partial_update(
     let mut local_var_req_builder =
         local_var_client.request(reqwest::Method::PATCH, local_var_uri_str.as_str());
 
-    if let Some(ref local_var_str) = ask_when_reaffirm_question_modal {
-        local_var_req_builder = local_var_req_builder.query(&[(
-            "ask_when_reaffirm_question_modal",
-            &local_var_str.to_string(),
-        )]);
-    }
-    if let Some(ref local_var_str) = date_joined {
-        local_var_req_builder =
-            local_var_req_builder.query(&[("date_joined", &local_var_str.to_string())]);
-    }
-    if let Some(ref local_var_str) = default_community_visibility {
-        local_var_req_builder = local_var_req_builder
-            .query(&[("default_community_visibility", &local_var_str.to_string())]);
-    }
-    if let Some(ref local_var_str) = default_mp_visibility {
-        local_var_req_builder =
-            local_var_req_builder.query(&[("default_mp_visibility", &local_var_str.to_string())]);
-    }
-    if let Some(ref local_var_str) = email {
-        local_var_req_builder =
-            local_var_req_builder.query(&[("email", &local_var_str.to_string())]);
-    }
-    local_var_req_builder = local_var_req_builder.query(&[("first_name", &first_name.to_string())]);
-    if let Some(ref local_var_str) = formerly_known_as {
-        local_var_req_builder =
-            local_var_req_builder.query(&[("formerly_known_as", &local_var_str.to_string())]);
-    }
-    if let Some(ref local_var_str) = is_staff {
-        local_var_req_builder =
-            local_var_req_builder.query(&[("is_staff", &local_var_str.to_string())]);
-    }
-    if let Some(ref local_var_str) = is_superuser {
-        local_var_req_builder =
-            local_var_req_builder.query(&[("is_superuser", &local_var_str.to_string())]);
-    }
-    local_var_req_builder = local_var_req_builder.query(&[("last_name", &last_name.to_string())]);
-    if let Some(ref local_var_str) = last_visited {
-        local_var_req_builder =
-            local_var_req_builder.query(&[("last_visited", &local_var_str.to_string())]);
-    }
-    if let Some(ref local_var_str) = level {
-        local_var_req_builder =
-            local_var_req_builder.query(&[("level", &local_var_str.to_string())]);
-    }
-    if let Some(ref local_var_str) = level_title {
-        local_var_req_builder =
-            local_var_req_builder.query(&[("levelTitle", &local_var_str.to_string())]);
-    }
-    if let Some(ref local_var_str) = permissions {
-        local_var_req_builder =
-            local_var_req_builder.query(&[("permissions", &local_var_str.to_string())]);
-    }
-    if let Some(ref local_var_str) = powers {
-        local_var_req_builder =
-            local_var_req_builder.query(&[("powers", &local_var_str.to_string())]);
-    }
-    if let Some(ref local_var_str) = purchasable_track_record {
-        local_var_req_builder = local_var_req_builder
-            .query(&[("purchasable_track_record", &local_var_str.to_string())]);
-    }
-    if let Some(ref local_var_str) = score {
-        local_var_req_builder =
-            local_var_req_builder.query(&[("score", &local_var_str.to_string())]);
-    }
-    if let Some(ref local_var_str) = show_profile_comments {
-        local_var_req_builder =
-            local_var_req_builder.query(&[("show_profile_comments", &local_var_str.to_string())]);
-    }
-    if let Some(ref local_var_str) = supporter_level {
-        local_var_req_builder =
-            local_var_req_builder.query(&[("supporter_level", &local_var_str.to_string())]);
-    }
-    if let Some(ref local_var_str) = supporter_since {
-        local_var_req_builder =
-            local_var_req_builder.query(&[("supporter_since", &local_var_str.to_string())]);
-    }
-    if let Some(ref local_var_str) = tachyons {
-        local_var_req_builder =
-            local_var_req_builder.query(&[("tachyons", &local_var_str.to_string())]);
-    }
-    if let Some(ref local_var_str) = url {
-        local_var_req_builder = local_var_req_builder.query(&[("url", &local_var_str.to_string())]);
-    }
-    if let Some(ref local_var_str) = username {
-        local_var_req_builder =
-            local_var_req_builder.query(&[("username", &local_var_str.to_string())]);
-    }
-    if let Some(ref local_var_str) = username_change_cost {
-        local_var_req_builder =
-            local_var_req_builder.query(&[("username_change_cost", &local_var_str.to_string())]);
-    }
     if let Some(ref local_var_user_agent) = local_var_configuration.user_agent {
         local_var_req_builder =
             local_var_req_builder.header(reqwest::header::USER_AGENT, local_var_user_agent.clone());
