@@ -188,6 +188,12 @@ def process(spec)
   # Add servers config to aid generated code and docs
   spec['servers'] = [{ 'url' => 'https://www.metaculus.com' }]
 
+  # Condensing the description in the OpenAPI spec. This is desired because
+  # the generator sticks the description in every generated Rust file and the
+  # README where it's not really appropriate. I didn't see a way to override
+  # it in the config, though we could set up custom templates.
+  spec['info']['description'] = "Welcome to the unofficial Rust client for the Metaculus API"
+
   spec
 end
 
