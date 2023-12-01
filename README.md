@@ -149,6 +149,7 @@ will be nested in a \"super-schema\" containing each of those; contact us for de
 <hr/>
 
 
+For more information, please visit [https://www.metaculus.com/api2/schema/redoc/](https://www.metaculus.com/api2/schema/redoc/)
 
 ## Overview
 

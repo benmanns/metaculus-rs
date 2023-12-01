@@ -4,6 +4,7 @@ enablePostProcessFile: true
 generatorName: rust
 httpUserAgent: "metaculus-rs/0.0.1"
 infoEmail: Benjamin Manns <opensource@benmanns.com>
+infoUrl: https://www.metaculus.com/api2/schema/redoc/
 inputSpec: Metaculus API (1.0) Modified.yaml
 licenseInfo: Unknown
 packageName: metaculus
