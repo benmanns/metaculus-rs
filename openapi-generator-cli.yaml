@@ -11,4 +11,5 @@ packageName: metaculus
 packageVersion: 0.0.1
 repositoryUrl: https://github.com/benmanns/metaculus-rs
 strictSpec: true
+templateDir: .openapi-generator/templates/rust/
 useSingleRequestParameter: true
