@@ -5195,6 +5195,7 @@ components:
           type: string
           format: date-time
           readOnly: true
+          nullable: true
         resolve_time:
           type: string
           format: date-time
@@ -5430,6 +5431,7 @@ components:
           type: string
           format: date-time
           readOnly: true
+          nullable: true
         resolve_time:
           type: string
           format: date-time
@@ -5843,6 +5845,7 @@ components:
           type: string
           format: date-time
           readOnly: true
+          nullable: true
         resolve_time:
           type: string
           format: date-time
@@ -5939,6 +5942,7 @@ components:
           type: string
           format: date-time
           readOnly: true
+          nullable: true
         resolve_time:
           type: string
           format: date-time
@@ -6040,6 +6044,7 @@ components:
           type: string
           format: date-time
           readOnly: true
+          nullable: true
         resolve_time:
           type: string
           format: date-time

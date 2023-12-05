@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 **resolution** | Option<**f64**> |  | [readonly]
 **publish_time** | Option<**String**> |  | [optional]
 **close_time** | Option<**String**> |  | [optional]
-**effected_close_time** | **String** |  | [readonly]
+**effected_close_time** | Option<**String**> |  | [readonly]
 **resolve_time** | Option<**String**> |  | [optional]
 **possibilities** | Option<[**::std::collections::HashMap<String, serde_json::Value>**](serde_json::Value.md)> |  | [optional]
 **sub_question_label** | Option<**String**> |  | [optional]

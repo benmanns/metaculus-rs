@@ -40,8 +40,11 @@ pub struct QuestionUserDetail {
     pub publish_time: Option<String>,
     #[serde(rename = "close_time", skip_serializing_if = "Option::is_none")]
     pub close_time: Option<String>,
-    #[serde(rename = "effected_close_time")]
-    pub effected_close_time: String,
+    #[serde(
+        rename = "effected_close_time",
+        deserialize_with = "Option::deserialize"
+    )]
+    pub effected_close_time: Option<String>,
     #[serde(rename = "resolve_time", skip_serializing_if = "Option::is_none")]
     pub resolve_time: Option<String>,
     #[serde(rename = "possibilities", skip_serializing_if = "Option::is_none")]
@@ -215,7 +218,7 @@ impl QuestionUserDetail {
         title_short: String,
         resolution: Option<f64>,
         created_time: String,
-        effected_close_time: String,
+        effected_close_time: Option<String>,
         user_perms: Option<serde_json::Value>,
         edited_time: String,
         last_activity_time: String,

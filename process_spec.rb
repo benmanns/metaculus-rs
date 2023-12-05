@@ -187,6 +187,21 @@ def process(spec)
       end
     end
 
+    # Make effected_close_time nullable based on observed responses
+    # I have not been able to check the others:
+    # * Considerations
+    # * PatchedQuestionUpdate
+    # * Question
+    # * QuestionRelated
+    # * QuestionUpdate
+    check_effected_close_time_schemas = ['QuestionUser', 'QuestionUserDetail', 'SubQuestionList', 'SubQuestionUserDetail', 'SubQuestionUserList']
+    check_effected_close_time_schemas.each do |schema|
+      if spec['components']['schemas'][schema]['properties']['effected_close_time']['nullable']
+        raise "#{schema} effected_close_time already nullable"
+      end
+      spec['components']['schemas'][schema]['properties']['effected_close_time']['nullable'] = true
+    end
+
     if schemas_were_sorted
       spec['components']['schemas'] = spec['components']['schemas'].sort.to_h
     end

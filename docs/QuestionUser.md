@@ -18,7 +18,7 @@ Name | Type | Description | Notes
 **created_time** | **String** |  | [readonly]
 **publish_time** | Option<**String**> |  | [optional]
 **close_time** | Option<**String**> |  | [optional]
-**effected_close_time** | **String** |  | [readonly]
+**effected_close_time** | Option<**String**> |  | [readonly]
 **resolve_time** | Option<**String**> |  | [optional]
 **possibilities** | Option<[**::std::collections::HashMap<String, serde_json::Value>**](serde_json::Value.md)> |  | [optional]
 **scoring** | Option<[**::std::collections::HashMap<String, serde_json::Value>**](serde_json::Value.md)> |  | [optional][default to {}]

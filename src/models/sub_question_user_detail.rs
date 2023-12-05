@@ -20,8 +20,11 @@ pub struct SubQuestionUserDetail {
     pub publish_time: Option<String>,
     #[serde(rename = "close_time", skip_serializing_if = "Option::is_none")]
     pub close_time: Option<String>,
-    #[serde(rename = "effected_close_time")]
-    pub effected_close_time: String,
+    #[serde(
+        rename = "effected_close_time",
+        deserialize_with = "Option::deserialize"
+    )]
+    pub effected_close_time: Option<String>,
     #[serde(rename = "resolve_time", skip_serializing_if = "Option::is_none")]
     pub resolve_time: Option<String>,
     #[serde(rename = "possibilities", skip_serializing_if = "Option::is_none")]
@@ -74,7 +77,7 @@ impl SubQuestionUserDetail {
         active_state: Option<serde_json::Value>,
         id: i32,
         resolution: Option<f64>,
-        effected_close_time: String,
+        effected_close_time: Option<String>,
         metaculus_prediction: Option<serde_json::Value>,
         community_prediction: Option<serde_json::Value>,
         conditioned_on_resolution: f64,
