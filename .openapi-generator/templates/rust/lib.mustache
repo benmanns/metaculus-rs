@@ -1,16 +1,16 @@
 #[macro_use]
 extern crate serde_derive;
 
-extern crate serde;
-extern crate serde_json;
-extern crate url;
 {{#hyper}}
-extern crate hyper;
 extern crate futures;
+extern crate hyper;
 {{/hyper}}
 {{#reqwest}}
 extern crate reqwest;
 {{/reqwest}}
+extern crate serde;
+extern crate serde_json;
+extern crate url;
 
 pub mod apis;
 pub mod models;
