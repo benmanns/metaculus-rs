@@ -221,6 +221,12 @@ pub {{#supportAsync}}async {{/supportAsync}}fn {{{operationId}}}(configuration: 
         local_var_req_builder = local_var_req_builder.header("{{{keyParamName}}}", local_var_value);
     };
     {{/isKeyInHeader}}
+    {{#isKeyInCookie}}
+    if let Some(ref local_var_cookie) = local_var_configuration.cookie {
+        local_var_req_builder =
+            local_var_req_builder.header("Cookie", format!("{{{keyParamName}}}={}", local_var_cookie.value));
+    };
+    {{/isKeyInCookie}}
     {{/isApiKey}}
     {{#isBasic}}
     {{#isBasicBasic}}

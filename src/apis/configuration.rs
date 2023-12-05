@@ -17,6 +17,7 @@ pub struct Configuration {
     pub oauth_access_token: Option<String>,
     pub bearer_access_token: Option<String>,
     pub api_key: Option<ApiKey>,
+    pub cookie: Option<Cookie>,
     // TODO: take an oauth2 token source, similar to the go one
 }
 
@@ -26,6 +27,11 @@ pub type BasicAuth = (String, Option<String>);
 pub struct ApiKey {
     pub prefix: Option<String>,
     pub key: String,
+}
+
+#[derive(Debug, Clone)]
+pub struct Cookie {
+    pub value: String,
 }
 
 impl Configuration {
@@ -45,6 +51,7 @@ impl Default for Configuration {
             oauth_access_token: None,
             bearer_access_token: None,
             api_key: None,
+            cookie: None,
         }
     }
 }

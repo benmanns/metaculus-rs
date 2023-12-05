@@ -146,6 +146,10 @@ pub async fn organizations_list(
         local_var_req_builder = local_var_req_builder
             .basic_auth(local_var_auth_conf.0.clone(), local_var_auth_conf.1.clone());
     };
+    if let Some(ref local_var_cookie) = local_var_configuration.cookie {
+        local_var_req_builder =
+            local_var_req_builder.header("Cookie", format!("sessionid={}", local_var_cookie.value));
+    };
     if let Some(ref local_var_apikey) = local_var_configuration.api_key {
         let local_var_key = local_var_apikey.key.clone();
         let local_var_value = match local_var_apikey.prefix {
@@ -202,6 +206,10 @@ pub async fn organizations_members_create(
     if let Some(ref local_var_auth_conf) = local_var_configuration.basic_auth {
         local_var_req_builder = local_var_req_builder
             .basic_auth(local_var_auth_conf.0.clone(), local_var_auth_conf.1.clone());
+    };
+    if let Some(ref local_var_cookie) = local_var_configuration.cookie {
+        local_var_req_builder =
+            local_var_req_builder.header("Cookie", format!("sessionid={}", local_var_cookie.value));
     };
     if let Some(ref local_var_apikey) = local_var_configuration.api_key {
         let local_var_key = local_var_apikey.key.clone();
@@ -263,6 +271,10 @@ pub async fn organizations_members_create2(
         local_var_req_builder = local_var_req_builder
             .basic_auth(local_var_auth_conf.0.clone(), local_var_auth_conf.1.clone());
     };
+    if let Some(ref local_var_cookie) = local_var_configuration.cookie {
+        local_var_req_builder =
+            local_var_req_builder.header("Cookie", format!("sessionid={}", local_var_cookie.value));
+    };
     if let Some(ref local_var_apikey) = local_var_configuration.api_key {
         let local_var_key = local_var_apikey.key.clone();
         let local_var_value = match local_var_apikey.prefix {
@@ -322,6 +334,10 @@ pub async fn organizations_members_destroy(
         local_var_req_builder = local_var_req_builder
             .basic_auth(local_var_auth_conf.0.clone(), local_var_auth_conf.1.clone());
     };
+    if let Some(ref local_var_cookie) = local_var_configuration.cookie {
+        local_var_req_builder =
+            local_var_req_builder.header("Cookie", format!("sessionid={}", local_var_cookie.value));
+    };
     if let Some(ref local_var_apikey) = local_var_configuration.api_key {
         let local_var_key = local_var_apikey.key.clone();
         let local_var_value = match local_var_apikey.prefix {
@@ -380,6 +396,10 @@ pub async fn organizations_members_partial_update(
     if let Some(ref local_var_auth_conf) = local_var_configuration.basic_auth {
         local_var_req_builder = local_var_req_builder
             .basic_auth(local_var_auth_conf.0.clone(), local_var_auth_conf.1.clone());
+    };
+    if let Some(ref local_var_cookie) = local_var_configuration.cookie {
+        local_var_req_builder =
+            local_var_req_builder.header("Cookie", format!("sessionid={}", local_var_cookie.value));
     };
     if let Some(ref local_var_apikey) = local_var_configuration.api_key {
         let local_var_key = local_var_apikey.key.clone();
@@ -441,6 +461,10 @@ pub async fn organizations_members_update(
         local_var_req_builder = local_var_req_builder
             .basic_auth(local_var_auth_conf.0.clone(), local_var_auth_conf.1.clone());
     };
+    if let Some(ref local_var_cookie) = local_var_configuration.cookie {
+        local_var_req_builder =
+            local_var_req_builder.header("Cookie", format!("sessionid={}", local_var_cookie.value));
+    };
     if let Some(ref local_var_apikey) = local_var_configuration.api_key {
         let local_var_key = local_var_apikey.key.clone();
         let local_var_value = match local_var_apikey.prefix {
@@ -497,6 +521,10 @@ pub async fn organizations_retrieve(
     if let Some(ref local_var_auth_conf) = local_var_configuration.basic_auth {
         local_var_req_builder = local_var_req_builder
             .basic_auth(local_var_auth_conf.0.clone(), local_var_auth_conf.1.clone());
+    };
+    if let Some(ref local_var_cookie) = local_var_configuration.cookie {
+        local_var_req_builder =
+            local_var_req_builder.header("Cookie", format!("sessionid={}", local_var_cookie.value));
     };
     if let Some(ref local_var_apikey) = local_var_configuration.api_key {
         let local_var_key = local_var_apikey.key.clone();

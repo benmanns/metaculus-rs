@@ -160,6 +160,10 @@ pub async fn comments_create(
         local_var_req_builder = local_var_req_builder
             .basic_auth(local_var_auth_conf.0.clone(), local_var_auth_conf.1.clone());
     };
+    if let Some(ref local_var_cookie) = local_var_configuration.cookie {
+        local_var_req_builder =
+            local_var_req_builder.header("Cookie", format!("sessionid={}", local_var_cookie.value));
+    };
     if let Some(ref local_var_apikey) = local_var_configuration.api_key {
         let local_var_key = local_var_apikey.key.clone();
         let local_var_value = match local_var_apikey.prefix {
@@ -217,6 +221,10 @@ pub async fn comments_destroy(
         local_var_req_builder = local_var_req_builder
             .basic_auth(local_var_auth_conf.0.clone(), local_var_auth_conf.1.clone());
     };
+    if let Some(ref local_var_cookie) = local_var_configuration.cookie {
+        local_var_req_builder =
+            local_var_req_builder.header("Cookie", format!("sessionid={}", local_var_cookie.value));
+    };
     if let Some(ref local_var_apikey) = local_var_configuration.api_key {
         let local_var_key = local_var_apikey.key.clone();
         let local_var_value = match local_var_apikey.prefix {
@@ -273,6 +281,10 @@ pub async fn comments_like_create(
     if let Some(ref local_var_auth_conf) = local_var_configuration.basic_auth {
         local_var_req_builder = local_var_req_builder
             .basic_auth(local_var_auth_conf.0.clone(), local_var_auth_conf.1.clone());
+    };
+    if let Some(ref local_var_cookie) = local_var_configuration.cookie {
+        local_var_req_builder =
+            local_var_req_builder.header("Cookie", format!("sessionid={}", local_var_cookie.value));
     };
     if let Some(ref local_var_apikey) = local_var_configuration.api_key {
         let local_var_key = local_var_apikey.key.clone();
@@ -365,6 +377,10 @@ pub async fn comments_list(
         local_var_req_builder = local_var_req_builder
             .basic_auth(local_var_auth_conf.0.clone(), local_var_auth_conf.1.clone());
     };
+    if let Some(ref local_var_cookie) = local_var_configuration.cookie {
+        local_var_req_builder =
+            local_var_req_builder.header("Cookie", format!("sessionid={}", local_var_cookie.value));
+    };
     if let Some(ref local_var_apikey) = local_var_configuration.api_key {
         let local_var_key = local_var_apikey.key.clone();
         let local_var_value = match local_var_apikey.prefix {
@@ -421,6 +437,10 @@ pub async fn comments_partial_update(
     if let Some(ref local_var_auth_conf) = local_var_configuration.basic_auth {
         local_var_req_builder = local_var_req_builder
             .basic_auth(local_var_auth_conf.0.clone(), local_var_auth_conf.1.clone());
+    };
+    if let Some(ref local_var_cookie) = local_var_configuration.cookie {
+        local_var_req_builder =
+            local_var_req_builder.header("Cookie", format!("sessionid={}", local_var_cookie.value));
     };
     if let Some(ref local_var_apikey) = local_var_configuration.api_key {
         let local_var_key = local_var_apikey.key.clone();
@@ -480,6 +500,10 @@ pub async fn comments_report_create(
         local_var_req_builder = local_var_req_builder
             .basic_auth(local_var_auth_conf.0.clone(), local_var_auth_conf.1.clone());
     };
+    if let Some(ref local_var_cookie) = local_var_configuration.cookie {
+        local_var_req_builder =
+            local_var_req_builder.header("Cookie", format!("sessionid={}", local_var_cookie.value));
+    };
     if let Some(ref local_var_apikey) = local_var_configuration.api_key {
         let local_var_key = local_var_apikey.key.clone();
         let local_var_value = match local_var_apikey.prefix {
@@ -537,6 +561,10 @@ pub async fn comments_retrieve(
         local_var_req_builder = local_var_req_builder
             .basic_auth(local_var_auth_conf.0.clone(), local_var_auth_conf.1.clone());
     };
+    if let Some(ref local_var_cookie) = local_var_configuration.cookie {
+        local_var_req_builder =
+            local_var_req_builder.header("Cookie", format!("sessionid={}", local_var_cookie.value));
+    };
     if let Some(ref local_var_apikey) = local_var_configuration.api_key {
         let local_var_key = local_var_apikey.key.clone();
         let local_var_value = match local_var_apikey.prefix {
@@ -593,6 +621,10 @@ pub async fn comments_update(
     if let Some(ref local_var_auth_conf) = local_var_configuration.basic_auth {
         local_var_req_builder = local_var_req_builder
             .basic_auth(local_var_auth_conf.0.clone(), local_var_auth_conf.1.clone());
+    };
+    if let Some(ref local_var_cookie) = local_var_configuration.cookie {
+        local_var_req_builder =
+            local_var_req_builder.header("Cookie", format!("sessionid={}", local_var_cookie.value));
     };
     if let Some(ref local_var_apikey) = local_var_configuration.api_key {
         let local_var_key = local_var_apikey.key.clone();
