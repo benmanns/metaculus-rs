@@ -172,6 +172,21 @@ def process(spec)
       }
     end
 
+    check_predictions_schemas = ['ExtendedPredictionUsername', 'Prediction', 'PredictionUsername']
+    check_predictions_schemas.each do |schema|
+      if spec['components']['schemas'][schema]['properties']['predictions']['type'] == 'object'
+        spec['components']['schemas'][schema]['properties']['predictions'] = {
+          'type' => 'array',
+          'items' => {
+            'type' => 'object',
+            'additionalProperties' => {}
+          }
+        }
+      else
+        raise "#{schema} predictions already fixed"
+      end
+    end
+
     if schemas_were_sorted
       spec['components']['schemas'] = spec['components']['schemas'].sort.to_h
     end

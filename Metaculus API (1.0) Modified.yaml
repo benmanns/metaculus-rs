@@ -3354,8 +3354,10 @@ components:
           type: integer
           readOnly: true
         predictions:
-          type: object
-          additionalProperties: {}
+          type: array
+          items:
+            type: object
+            additionalProperties: {}
         points_won:
           type: number
           format: double
@@ -4148,8 +4150,10 @@ components:
           type: integer
           readOnly: true
         predictions:
-          type: object
-          additionalProperties: {}
+          type: array
+          items:
+            type: object
+            additionalProperties: {}
         points_won:
           type: number
           format: double
@@ -4260,8 +4264,10 @@ components:
           type: integer
           readOnly: true
         predictions:
-          type: object
-          additionalProperties: {}
+          type: array
+          items:
+            type: object
+            additionalProperties: {}
         points_won:
           type: number
           format: double

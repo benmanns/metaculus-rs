@@ -13,7 +13,7 @@ pub struct Prediction {
     #[serde(rename = "id")]
     pub id: i32,
     #[serde(rename = "predictions", skip_serializing_if = "Option::is_none")]
-    pub predictions: Option<::std::collections::HashMap<String, serde_json::Value>>,
+    pub predictions: Option<Vec<::std::collections::HashMap<String, serde_json::Value>>>,
     #[serde(
         rename = "points_won",
         default,
