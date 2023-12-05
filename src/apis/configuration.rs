@@ -45,7 +45,7 @@ impl Default for Configuration {
     fn default() -> Self {
         Configuration {
             base_path: "https://www.metaculus.com".to_owned(),
-            user_agent: Some("metaculus-rs/0.0.2".to_owned()),
+            user_agent: Some("metaculus-rs/0.1.0".to_owned()),
             client: reqwest::Client::new(),
             basic_auth: None,
             oauth_access_token: None,

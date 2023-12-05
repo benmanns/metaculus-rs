@@ -2,14 +2,14 @@ enableMinimalUpdate: true
 # Does not work, but leaving in case it starts working.
 enablePostProcessFile: true
 generatorName: rust
-httpUserAgent: "metaculus-rs/0.0.2"
+httpUserAgent: "metaculus-rs/0.1.0"
 infoDescription: Welcome to the unofficial Rust client for the Metaculus API
 infoEmail: Benjamin Manns <opensource@benmanns.com>
 infoUrl: https://www.metaculus.com/api2/schema/redoc/
 inputSpec: Metaculus API (1.0) Modified.yaml
 licenseInfo: Unknown
 packageName: metaculus
-packageVersion: 0.0.2
+packageVersion: 0.1.0
 repositoryUrl: https://github.com/benmanns/metaculus-rs
 strictSpec: true
 templateDir: .openapi-generator/templates/rust/
