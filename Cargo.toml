@@ -1,6 +1,6 @@
 [package]
 name = "metaculus"
-version = "0.2.0"
+version = "0.3.0"
 authors = ["Benjamin Manns <opensource@benmanns.com>"]
 description = "API Client for Metaculus"
 license-file = "LICENSE"
